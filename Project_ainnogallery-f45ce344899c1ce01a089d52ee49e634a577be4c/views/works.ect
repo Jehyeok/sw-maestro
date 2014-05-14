@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Chris's Page</title>  
+            <link rel="stylesheet" type="text/css" href="/stylesheets/default.css">        
+            <link rel="stylesheet" type="text/css" href="/stylesheets/works.css">
+            <link rel="stylesheet" type="text/css" href="/stylesheets/common_hyogu.css">
+    </head>
+    <body class="work_body">
+        <aside id="profileContainer">
+            <div id="ainnoLogoBtn"></div>
+            <div id="profileCardWrapper">
+                <div id="profileInfoWrapper">
+                    <div id="profileMainBtn"></div>
+                    <div id="artistTagWrapper" class="profileContent">
+                        <div class="artistTag">
+                            <p>#designer</p>
+                         </div>
+                        <div class="artistTag">
+                            <p>#photographer</p>
+                        </div>                      
+                        <div class="artistTag">
+                            <p>#artist</p>
+                        </div>
+                    </div> 
+
+                    <div id="artistTagEdit" class="profileEditContent">
+                        <div style="background-color: black; width: 20px; height: 20px;"></div>
+                        <input placeholder="#write tags you want to include" onfocus="this.placeholder = ''" onblur="this.placeholder = '#write tags you want to include'"></input>
+                    </div>
+
+                    <div id="profilePhoto"></div>
+                    <div id="artistName">
+                        <p>HAN</p>
+                    </div>
+                </div>
+                <div id="artistProfileEdit" class="profileContent"></div>
+                <div id="artistProfileEditComplete" class="profileEditContent"></div>
+            </div>
+            <div id="profileDataWrapper">
+                <div id="artistSocialData">
+                    <div id="artistFacebook" class="profileContent">
+                        <div id="artistFacebookIcon"></div>
+                        <p>handesign</p>
+                    </div>
+                    <div id="artistTwitter" class="profileContent">
+                        <p>@handesign</p>
+                    </div>
+                </div>
+                <div id="resume">
+                    <p id="resumeBtn" class="profileContent">portfolio</p>
+                    <div id="resumeIcon" class="profileContent"></div>
+                    <p id="resumeEdit" class="profileEditContent">upload your portfolio</p>
+                </div>
+                <div id="careersWrapper">
+                    <div id="careerContentWrapper" class="profileContent">
+                        <div class="career">
+                            <div class="careerDate">
+                                <p>2014.1</p>
+                            </div>
+                            <div class="careerContent">
+                                <p>아이노갤러리 개인전</p>
+                            </div>
+                        </div> 
+                        <div class="career">
+                            <div class="careerDate">
+                                <p>2014.1</p>
+                            </div>
+                            <div class="careerContent">
+                                <p>아이노갤러리 개인전</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="careerContentEditWrapper" class="profileEditContent">
+                        <div class="career">
+                            <div class="careerRowDeletePlace"></div>
+                            <div class="careerRowDelete"></div>
+                            <div class="careerDateEdit">
+                                <input />
+                            </div>
+                            <div class="careerContentEdit">
+                                <input />
+                            </div>
+                        </div>
+                        <div class="career">
+                            <div class="careerRowDeletePlace"></div>
+                            <div class="careerRowDelete"></div>
+                            <div class="careerDateEdit">
+                                <input />
+                            </div>
+                            <div class="careerContentEdit">
+                                <input />
+                            </div>
+                        </div>
+                    </div>
+                    <div id="addCareerBtn" class="profileEditContent"></div>
+                </div>
+                <div id="profileStatement">
+                    <div id="profileStatementContent" class="profileContent">
+                        <p>자유, 그 찬란한 이름! 자유, 그 찬란한 이름! 자유, 그 찬란한 이름! 자유, 그 찬란한 이름! 자유, 그 찬란한 이름! 자유, 그 찬란한 이름! 자유, 그 찬란한 이름! 자유, 그 찬란한 이름! 자유, 그 찬란한 이름! 자유, 그 찬란한 이름! 자유, 그 찬란한 이름! 자유, 그 찬란한 이름! 자유, 그 찬란한 이름! 자유, 그 찬란한 이름! 자유, 그 찬란한 이름! 자유, 그 찬란한 이름! 자유, 그 찬란한 이름! 자유, 그 찬란한 이름!</p>
+                    </div>
+                    <textarea id="profileStatementContentEdit" class="profileEditContent"></textarea>
+                </div>
+            </div>                
+        </aside>
+        <section id="section">
+            <div id="addContentDiv" value="up">
+            	<form id="multiform" method="POST" enctype="multipart/data" action="#">
+                    <div id="fileUploadContainer">
+                    	<input type="file" name="work_file" id="input_file_hidden">
+                    	<div id="fileUpload"></div>
+                    	<img style="width:100%; height:100%" />
+                    </div>
+                    <div id="workInfo"> 
+                    	<input type="text" name="title" placeholder="title" style="font-size:2em"/>
+						<input type="text" name="date" placeholder="2013.00.00" />
+						<input type="text" name="size" placeholder="00 X 00 cm"/>
+						<input type="text" name="material" placeholder="material" />
+						<input type="text" name="tags" placeholder="#pink lover  #good morning" />
+                    </div>
+                    <div id="checkBtn"></div>
+                </form>
+                <div id="addContentBtn"><a href="#" style="color: white;">작품을 더하시려면 여기를 클릭하세요.</a></div>
+            </div>
+            <div id="content" >
+            </div>
+        </section>
+    </body>
+    <script>
+        var length = <%= @length %>;
+        var work_idx = <%- @work_idx %>;
+        var work_width_height_ratio = <%- @work_width_height_ratio %>;
+        var work_hash = <%- @work_hash %>;
+        work_hash = work_hash.filter(function(n){return n});
+        work_width_height_ratio = work_width_height_ratio.filter(function(n){return n});
+        console.log(work_width_height_ratio);
+    </script>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="/scripts/works-hyogu.js"></script>
+
+    <script>
+        $('#artistProfileEdit').click(function() {
+            $('.profileContent').hide();
+            $('.profileEditContent').show();
+        });
+
+        $('#artistProfileEditComplete').click(function() {
+            $('.profileEditContent').hide();
+            $('.profileContent').show();            
+        });
+
+        $('#profileCardWrapper').css('height', document.body.clientHeight*0.44);
+        $('#profileDataWrapper').css('top', $('#profileCardWrapper').height());    
+        $('#profileDataWrapper').css('height', document.body.clientHeight-$('#profileCardWrapper').height());
+        $('#artistFacebook').css('top', $('#artistSocialData').height()/2-10);
+        $('#artistTwitter').css('top', $('#artistSocialData').height()/2-10);        
+        $('#resumeBtn').css('top', $('#resume').height()/2-10);
+        $('#resumeIcon').css('top', $('#resume').height()/2-10);
+        $('#resumeEdit').css('top', $('#resume').height()/2-10);  
+        $('.careerContent').css('width', $('#careerContentWrapper').width()-$('.careerDate').width());        
+        $('.careerContentEdit').css('width', $('#careerContentEditWrapper').width()-$('.careerDateEdit').width());        
+        $('#profileStatement').css('top', $('#artistSocialData').height()+$('#careersWrapper').height()).css('height', $('#profileDataWrapper').height()-$('#artistSocialData').height()-$('#careersWrapper').height());
+
+        $(window).resize(function() {
+        $('#profileContainer').css('height', document.body.clientHeight+document.body.scrollTop);            
+            $('#profileCardWrapper').css('height', document.body.clientHeight*0.44);
+            $('#profileDataWrapper').css('height', document.body.clientHeight-$('#profileCardWrapper').height()); 
+            $('#profileDataWrapper').css('top', $('#profileCardWrapper').height());         
+            $('.careerContent').css('width', $('#careerContentWrapper').width()-$('.careerDate').width());
+            $('.careerContentEdit').css('width', $('#careerContentEditWrapper').width()-$('.careerDateEdit').width());
+            $('#profileStatement').css('top', $('#artistSocialData').height()+$('#careersWrapper').height()).css('height', $('#profileDataWrapper').height()-$('#artistSocialData').height()-$('#careersWrapper').height());
+        });                        
+    </script>
+    <script>
+
+        var added_work_width = 0;
+        var added_work_height = 0;
+        // file thumnail
+        $('#input_file_hidden').change(function() {
+            console.log('works.ect > input_file_hidden.change() call');
+            
+            // $('#fileUploadContainer').append(
+            //  '<img src="' + URL.createObjectURL(this.files[0]) + '"' + 'style="width:100%; height:100%";' + '/>'
+            // );
+
+            var reader = new FileReader();
+            var work_img = new Image();
+
+            reader.readAsDataURL(this.files[0]);
+            reader.onload = function(file) {
+                work_img.src = file.target.result;
+                work_img.onload = function() {
+                    added_work_width = this.width;
+                    added_work_height = this.height;
+                    console.log('added_work_width: ' + added_work_width);
+                    console.log('added_work_height: ' + added_work_height);
+                }
+                $('#fileUploadContainer img').attr('src', work_img.src);
+                $('#fileUpload').css('visibility', 'hidden');   
+            }
+        });
+
+        $('#multiform').submit(function(event) {
+            event.preventDefault();
+
+            // console.log('addContentBtn submit');
+
+            var formObj = $(this);
+            var formData = new FormData(this);
+            formData.append('pixel_width', added_work_width);
+            formData.append('pixel_height', added_work_height);
+            
+            $.ajax({
+                url: "",
+                type: "POST",
+                data: formData,
+                contentType: false,
+                mimeType:"multipart/form-data",
+                processData: false
+            })
+            .done(function(data) {
+                // console.log(typeof(data));
+                // console.log(data);
+                // console.log('data.fileName: ' + data.fileName);
+                if (data.fileName !== 'err') {
+                    data = JSON.parse(data);
+                    // console.log(data.fileName);
+                    $('#content').prepend(
+                    // 추가하는 작품의 픽셀을 알아야함
+                    '<div class="work" style="height:' + '200' + 'px">' +
+                        '<img src=' + '"/temp/' + data.fileName + '" />' +
+                        '<div class="cover"></div>' + 
+                  '</div>').hide().fadeIn(1000);
+
+                    // console.log(workList);
+                    workList.onAddWork(200);
+                }
+            });
+        });
+
+        $('#section #addContentDiv form #checkBtn').click(function() {
+            console.log('addContentBtn click');
+            $('#multiform').submit();
+        });
+
+
+    </script>
+    <script>
+
+    </script>
+</html>

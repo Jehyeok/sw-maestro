@@ -1,0 +1,33 @@
+@import url(./common-stargt.css);
+
+.fixedWidth {
+	width:1180px;
+	margin:0 auto;
+	*zoom: 1;
+}
+
+.fixedWidth:before,
+.fixedWidth:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+
+.fixedWidth:after {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+
+.clearfix:after {
+	clear: both;
+}

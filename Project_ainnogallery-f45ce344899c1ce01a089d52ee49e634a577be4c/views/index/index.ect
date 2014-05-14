@@ -1,0 +1,175 @@
+<!DOCTYPE html>   
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title><%= @title %></title>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/default.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/common.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/layout-index.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/components-index.css">
+	</head>
+	<!-- !Body -->
+	<body id="index">
+		<header>
+			<div id="headerWrapper">
+				<div id="headerTop">
+					<div class="fixedWidth">
+						<h1><a href="/">Ainnogallery</a></h1>
+						<ul id="accounts">
+							<li><input class="accountsInput" id="user_id" name="user_id" type="email" placeholder="E-mail" /></li>
+							<li><input class="accountsInput" id="user_pw" name="user_pw" type="password" placeholder="Password" /></li>
+							<li><a id="accountLogIn" href="#">Log in</a></li>
+							<li><a id="accountSignUp" href="#">Sign up</a></li>
+						</ul>
+					</div>
+				</div>
+				<div id="highlighted" class="fixedWidth">
+					<h2>Highlighted Exhibitions<span class="tip"></span></h2>
+					<div id="highlightExWrapper">
+						<div class="artistExCard" id="artistExCard0"><div class="artistExImage" id="artistExImage0" style="background-image: url('/images/exhibit/1.png');"></div><div class="hoverArtistExImage" id="hoverArtistExImage0" style="display: none;"><p>13</p></div><div class="artistExDetails"><div class="beforeHoverWrapper" id="beforeHoverWrapper0" style="display: block;"><div class="artistExTitle"><h6><p>gauguin</p></h6></div><div class="artistExSchedule"><p>NaN-aN-aN ~ NaN-aN-aN</p></div></div><div class="hoverWrapper" id="HoverWrapper0" style="display: none;"><div class="moveEx" onclick="ExhibitionMain.enterExhibition(1, 'Han')"></div></div></div></div>
+						<div class="artistExCard" id="artistExCard0"><div class="artistExImage" id="artistExImage0" style="background-image: url('/images/exhibit/1.png');"></div><div class="hoverArtistExImage" id="hoverArtistExImage0" style="display: none;"><p>13</p></div><div class="artistExDetails"><div class="beforeHoverWrapper" id="beforeHoverWrapper0" style="display: block;"><div class="artistExTitle"><h6><p>gauguin</p></h6></div><div class="artistExSchedule"><p>NaN-aN-aN ~ NaN-aN-aN</p></div></div><div class="hoverWrapper" id="HoverWrapper0" style="display: none;"><div class="moveEx" onclick="ExhibitionMain.enterExhibition(1, 'Han')"></div></div></div></div>
+						<div class="artistExCard" id="artistExCard0"><div class="artistExImage" id="artistExImage0" style="background-image: url('/images/exhibit/1.png');"></div><div class="hoverArtistExImage" id="hoverArtistExImage0" style="display: none;"><p>13</p></div><div class="artistExDetails"><div class="beforeHoverWrapper" id="beforeHoverWrapper0" style="display: block;"><div class="artistExTitle"><h6><p>gauguin</p></h6></div><div class="artistExSchedule"><p>NaN-aN-aN ~ NaN-aN-aN</p></div></div><div class="hoverWrapper" id="HoverWrapper0" style="display: none;"><div class="moveEx" onclick="ExhibitionMain.enterExhibition(1, 'Han')"></div></div></div></div>
+						<div class="artistExCard" id="artistExCard0"><div class="artistExImage" id="artistExImage0" style="background-image: url('/images/exhibit/1.png');"></div><div class="hoverArtistExImage" id="hoverArtistExImage0" style="display: none;"><p>13</p></div><div class="artistExDetails"><div class="beforeHoverWrapper" id="beforeHoverWrapper0" style="display: block;"><div class="artistExTitle"><h6><p>gauguin</p></h6></div><div class="artistExSchedule"><p>NaN-aN-aN ~ NaN-aN-aN</p></div></div><div class="hoverWrapper" id="HoverWrapper0" style="display: none;"><div class="moveEx" onclick="ExhibitionMain.enterExhibition(1, 'Han')"></div></div></div></div>
+						<div class="artistExCard" id="artistExCard0"><div class="artistExImage" id="artistExImage0" style="background-image: url('/images/exhibit/1.png');"></div><div class="hoverArtistExImage" id="hoverArtistExImage0" style="display: none;"><p>13</p></div><div class="artistExDetails"><div class="beforeHoverWrapper" id="beforeHoverWrapper0" style="display: block;"><div class="artistExTitle"><h6><p>gauguin</p></h6></div><div class="artistExSchedule"><p>NaN-aN-aN ~ NaN-aN-aN</p></div></div><div class="hoverWrapper" id="HoverWrapper0" style="display: none;"><div class="moveEx" onclick="ExhibitionMain.enterExhibition(1, 'Han')"></div></div></div></div>
+					</div>
+				</div>
+			</div>
+		</header><!-- /header -->
+		
+		<!-- #contents -->
+		<section id="contents" class="fixedWidth">
+			<!-- browse -->
+			<div id="browse">
+				<header>
+					<div id="browseHeader">
+						<h2>Browse<span class="tip"></span></h2>
+						<nav>
+							<div id="browseNav" class="clearfix">
+								<ul id="typeSelect">
+									<li><a href="#" id="openExhibitions" class="selected">Exhibitions</a></li>
+									<li><a href="#" id="openArtists">Artists</a></li>
+								</ul>
+								<div id="nav-filterWrapper" class="rfloat">
+									<a id="filterOpener" href="#">Filters <span class="arrow-bottom"></span></a>
+									<div id="nav-filter">
+										<h4>Categories</h4>
+										<ul>
+											<li><a href="#">Lorem</a></li>
+											<li><a href="#">Ipsum</a></li>
+											<li><a href="#">Dolor</a></li>
+											<li><a href="#">Sit</a></li>
+											<li><a href="#">Amet</a></li>
+										</ul>
+										<h4>Order by</h4>
+										<ul>
+											<li><a href="#">Date</a></li>
+											<li><a href="#">Popularity</a></li>
+											<li><a href="#">Random</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</nav>
+					</div>
+				</header>
+				<section>
+					<div id="exhibitions">
+						<ul id="browseContents" class="clearfix">
+							<li>
+								<span class="offlineBadge">오프라인 전시중</span>
+								<div class="browseImg" style="background-image:url(/images/exhibit/2.png);"></div>
+								<h3>반쯤 미친 채 하늘 그리기 展</h3>
+								<p class="schedule">2013.6.12 - 17</p>
+								<a href="/han" class="user"><span class="user-icon"><img src="/images/index/user_profile_pic_sample.jpg" alt="user profile"></span>HAN</a>
+							</li>
+							<li>
+								<span class="offlineBadge">오프라인 전시중</span>
+								<div class="browseImg" style="background-image:url(/images/exhibit/2.png);"></div>
+								<h3>반쯤 미친 채 하늘 그리기 展</h3>
+								<p class="schedule">2013.6.12 - 17</p>
+								<a href="/han" class="user"><span class="user-icon"><img src="/images/index/user_profile_pic_sample.jpg" alt="user profile"></span>HAN</a>
+							</li>
+							<li>
+								<span class="offlineBadge">오프라인 전시중</span>
+								<div class="browseImg" style="background-image:url(/images/exhibit/2.png);"></div>
+								<h3>반쯤 미친 채 하늘 그리기 展</h3>
+								<p class="schedule">2013.6.12 - 17</p>
+								<a href="/han" class="user"><span class="user-icon"><img src="/images/index/user_profile_pic_sample.jpg" alt="user profile"></span>HAN</a>
+							</li>
+							<li>
+								<span class="offlineBadge">오프라인 전시중</span>
+								<div class="browseImg" style="background-image:url(/images/exhibit/2.png);"></div>
+								<h3>반쯤 미친 채 하늘 그리기 展</h3>
+								<p class="schedule">2013.6.12 - 17</p>
+								<a href="/han" class="user"><span class="user-icon"><img src="/images/index/user_profile_pic_sample.jpg" alt="user profile"></span>HAN</a>
+							</li>
+						</ul>
+						<a id="browseMore" href="#">더 보기 <span class="arrow-bottom"></span></a>
+					</div>
+					<div id="artists">
+						<ul id="artistBrowseContents" class="clearfix">
+						</ul>
+						<a id="browseMore" href="#">더 보기 <span class="arrow-bottom"></span></a>
+					</div>
+				</section>
+			</div>
+			<div id="activities">
+				<h2>Activities<span class="tip"></span></h2>
+				<div id="activityAnalytics">
+					<div id="totalArtists">
+						<strong>134</strong> Artists
+					</div>
+					<div id="totalExhibitions">
+						<strong>428</strong> Exhibitions
+					</div>
+					<div id="totalWorks">
+						<strong>3.2k</strong> Works
+					</div>
+				</div>
+			</div>
+			<div id="info">
+				<h2>Info<span class="tip"></span></h2>
+			</div>
+		</section><!-- /main -->
+		
+		<footer>
+			<div id="footer">
+				<div class="fixedWidth">
+					<p id="footerCopy">Ainnogallery &copy; 2014</p>
+					<p id="legalNotice">사업자등록번호 : xxx-xx-xxxxx | 통신판매업신고번호 : 제xxxx-xxxx-xxxx호 | (주)아우름플래닛 대표이사 김진우 | 서울특별시 관악구 낙성대동 서울대학교연구공원 SK텔레콤 연구소 1층 K1 | 대표전화 : xxx-xxxx-xxxx</p>
+					<ul id="footerLinks">
+						<li><a href="http://www.aurumplanet.com">회사소개</a></li>
+						<li><a href="#">이용약관</a></li>
+						<li><a href="#">개인정보취급방침</a></li>
+						<li><a href="#">책임의 한계와 법적 고지</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer><!-- /footer -->
+
+		<div id="modalWrapper">
+			<div id="modalMargin"></div>
+			<div id="modalBox">
+				<a href="#" id="modalCloser">닫기</a>
+				<% include 'index/signup.ect', { } %>
+			</div>
+		</div>
+		
+		<!-- !Javascript - at the bottom for fast page loading -->
+		<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="/scripts/index.js"></script>
+		
+		<!-- typekit font embedding -->
+		<script type="text/javascript">
+		  (function() {
+		    var config = {
+		      kitId: 'bxq0ruz',
+		      scriptTimeout: 3000
+		    };
+		    var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+		  })();
+		</script>
+	</body>
+</html>

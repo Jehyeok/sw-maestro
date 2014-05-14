@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Chris's Page</title>  
+            <link rel="stylesheet" type="text/css" href="/stylesheets/default.css">        
+            <link rel="stylesheet" type="text/css" href="/stylesheets/new_exhibition.css">
+            <link rel="stylesheet" type="text/css" href="/stylesheets/common_hyogu.css">
+    </head>
+    <body class="work_body">
+        <aside id="exInfoContainer">
+            <div id="ainnoLogoBtn"></div>            
+            <div id="exPreviewBtn"><p>preview</p></div>
+            <div id="makeExComplete"><p>submit</p></div>
+            <div id="exCardImageWrapper">
+                <div id="exCardImageEdit">
+                    <div id="exCardPreview">
+                        <div id="exCardImagePreview"></div>
+                        <div id="exCardInfoPreview"></div>
+                    </div>
+                    <div id="exCardImageUpload">
+                        <div id="exCardImageUploadBox">
+                            <div id="exCardImageUploadBtn"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="exInfoDataWrapper">
+                <div id="exTitleInfo">
+                    <div id="exTitle"><input value="아이노갤러리 개인전"></input><p>展</p></div>
+                    <div id="exTag"><p style="font-size: 13px;">@</p><p id="tagContent"></p></div>
+                </div>
+                <div id="exScheduleInfo">
+                    <div id="exSchedule"><p>오늘부터 일주일 간</p></div>
+                </div>
+                <div id="exArtWorksWrapper">
+                    <div id="exArtWorksContainerMoveLeft"></div>
+                    <div id="exArtWorksContainerMoveRight"></div>
+                    <div id="exArtWorksContainer">
+                        <div style="width: 50px; height: 80px;"></div>
+                        <div style="width: 50px; height: 90px;"></div>
+                        <div style="width: 50px; height: 40px;"></div>
+                        <div style="width: 50px; height: 80px;"></div>
+                        <div style="width: 50px; height: 90px;"></div>
+                        <div style="width: 50px; height: 40px;"></div>
+                        <div style="width: 50px; height: 80px;"></div>
+                        <div style="width: 50px; height: 90px;"></div>
+                        <div style="width: 50px; height: 40px;"></div>
+                    </div>
+                </div>
+                <div id="exStatement">
+                   <textarea id="exStatementContent"></textarea>
+                </div>
+            </div>                
+        </aside>
+        <section id="section">
+            <div id="addContentDiv" value="up" style="display: none">
+            	<form id="multiform" method="POST" enctype="multipart/data" action="#">
+                    <div id="fileUploadContainer">
+                    	<input type="file" name="work_file" id="input_file_hidden">
+                    	<div id="fileUpload"></div>
+                    	<img style="width:100%; height:100%" />
+                    </div>
+                    <div id="workInfo"> 
+                    	<input type="text" name="title" placeholder="title" style="font-size:2em"/>
+						<input type="text" name="date" placeholder="2013.00.00" />
+						<input type="text" name="size" placeholder="00 X 00 cm"/>
+						<input type="text" name="methods" placeholder="methods" />
+						<input type="text" name="tags" placeholder="#pink lover  #good morning" />
+                    </div>
+                    <div id="checkBtn"></div>
+                </form>
+                <div id="addContentBtn"><a href="#" style="color: white;">작품을 더하시려면 여기를 클릭하세요.</a></div>
+            </div>
+            <div id="content" >
+            </div>
+        </section>
+    </body>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>    
+    <script src="/scripts/core/vendor/jquery.touch-punch.min.js"></script>
+    <script src="/scripts/core/jquery.shapeshift.js"></script>    
+
+    <script> 
+    //페이지 로딩 시 레이아웃 잡는 코드         
+        $('#exCardImageWrapper').css('height', document.body.clientHeight*0.44);
+        $('#exCardImageEdit').css('height', $('#exCardImageWrapper').height()-100);
+        $('#exCardPreview').css('height', $('#exCardPreview').width()*1.5).css('max-height', $('#exCardImageEdit').height()-15).css('max-width', $('#exCardImageEdit').height()*2/3);
+        $('#exCardImageUpload').css('width', $('#exCardImageEdit').width()-$('#exCardPreview').width()).css('height', $('#exCardPreview').height()*0.8).css('top', ($('#exCardPreview').height()-$('#exCardImageUpload').height())/2).css('left', $('#exCardPreview').width());
+        $('#exCardImageUploadBtn').css('top', ($('#exCardImageUploadBox').height()-$('#exCardImageUploadBtn').height())/2);
+        $('#exInfoDataWrapper').css('top', $('#exCardImageWrapper').height());    
+        $('#exInfoDataWrapper').css('height', document.body.clientHeight-$('#exCardImageWrapper').height());
+        $('#exArtWorksContainerMoveRight').css('left', $('#exArtWorksWrapper').width()-50);
+        $('#exStatement').css('top', $('#exTitleInfo').height()+$('#exArtWorksWrapper').height()).css('height', $('#exInfoDataWrapper').height()-$('#exTitleInfo').height()-$('#exArtWorksWrapper').height());    
+
+    //페이지 리사이징 시 레이아웃 잡는 코드    
+        $(window).resize(function() {
+            $('#exCardImageWrapper').css('height', document.body.clientHeight*0.44);
+            $('#exCardImageEdit').css('height', $('#exCardImageWrapper').height()-100);
+            $('#exCardPreview').css('height', $('#exCardPreview').width()*1.5).css('max-height', $('#exCardImageEdit').height()-15).css('max-width', $('#exCardImageEdit').height()*2/3);
+            $('#exCardImageUpload').css('width', $('#exCardImageEdit').width()-$('#exCardPreview').width()).css('height', $('#exCardPreview').height()*0.8).css('top', ($('#exCardPreview').height()-$('#exCardImageUpload').height())/2).css('left', $('#exCardPreview').width());
+
+            $('#exInfoDataWrapper').css('height', document.body.clientHeight-$('#exCardImageWrapper').height()); 
+            $('#exInfoDataWrapper').css('top', $('#exCardImageWrapper').height());
+            $('#exStatement').css('top', $('#exTitleInfo').height()+$('#exArtWorksWrapper').height()).css('height', $('#exInfoDataWrapper').height()-$('#exTitleInfo').height()-$('#exArtWorksWrapper').height());                      
+        });
+
+    // 작품 썸네일 drag & drop 파트 코트
+        // 전시 작품 수
+        var artWorkNum = 9
+        // 전시 작품 썸네일 div 컨테이너 width
+        $('#exArtWorksContainer').css('width', 50*artWorkNum+100); 
+        
+        // 전시 작품 div에 순서대로 id 먹임
+        for(var i=0; i<artWorkNum; i++) {
+            $($("#exArtWorksContainer").find('div')[i]).attr('id', 'exArtWork' + i);
+        }           
+
+        // 전시 작품 썸네일 drag & drop 라이브러리 이용
+        $("#exArtWorksContainer").shapeshift();
+
+        // 전시 작품 썸네일 컨테이너 좌, 우 이동
+        $('#exArtWorksContainerMoveLeft').click(function() {
+            $( "#exArtWorksContainer" ).animate({
+                left: "+="+$('#exArtWorksContainer').width()/5
+          }, 'slow' );
+        });
+        $('#exArtWorksContainerMoveRight').click(function() {
+            $( "#exArtWorksContainer" ).animate({
+                left: "-="+$('#exArtWorksContainer').width()/5
+          }, 'slow' );
+        });
+
+    // 전시 제목 실시간 반영
+        $( "#exTitle input" ).keyup(function() {
+            var value = $( this ).val();
+            $( "#tagContent" ).text( value );
+        }).keyup();
+
+    </script>
+	<script src="/scripts/new_exhibition.js"></script>
+</html>

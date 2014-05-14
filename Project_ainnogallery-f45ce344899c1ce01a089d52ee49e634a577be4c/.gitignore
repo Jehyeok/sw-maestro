@@ -1,0 +1,19 @@
+# npm 모듈 디렉토리 제외
+node_modules/
+build/
+# 프로젝트 파일 제외
+#ainnogallery-env_osx.sublime-workspace
+#ainnogallery-env_osx.sublime-project
+#ainnogallery-env_windows.sublime-workspace
+#ainnogallery-env_windows.sublime-project
+*.sublime-workspace
+*.sublime-project
+# 기타 파일
+*.log
+Thumbs.db
+.DS_Store
+statics/.DS_Store
+
+statics/temp/.DS_Store
+
+statics/temp/.DS_Store

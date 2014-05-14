@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chris's Exhibition</title>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/default.css">
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>		
+	</head>
+	<body>
+		<div id="ainnoLogoBtn"></div>
+		<div id="coverWrapper">
+			<div id="coverCard">
+				<div id="coverCardImage"></div>
+				<div class="coverCardDetails"> 
+					<div class="beforeHoverWrapper">
+						<div class="artistExTitle"> 
+							<h6><p>슬픈우리젊은날 전</p></h6> 
+						</div>
+						<div class="artistExSchedule"> 
+							<p>2013.6.12 - 17</p> 
+						</div>							 
+					</div> 
+					<div class="hoverWrapper"> 
+						<div id="hoverContentWrapper">
+							<div class="noteBtn" id="note"></div>
+							<div class="noteBtn" id="noteClose" style="display: none"></div>
+							<div id="enterEx"></div> 
+							<div id="coverShare"></div>
+						</div>	
+					</div> 
+				</div>
+			</div>
+			<div id="statementWrapper">
+				<div id="statementContent">
+					<p>지배 따위는 관심 없다. 이 바다에서 제일 자유로운 사람이 해적왕이다.</p>
+				</div>
+			</div>
+		</div>
+		<script>
+			$("#coverCard").bind('mouseenter', function(){
+				$(".beforeHoverWrapper").fadeOut(100);
+				$(".hoverWrapper").fadeIn(300);
+			});
+			$("#coverCard").bind('mouseleave', function(){
+				$(".hoverWrapper").fadeOut(100);
+				$(".beforeHoverWrapper").fadeIn(300);
+			});
+
+			// 전시관 입장
+			$('#enterEx').click(function(e) {
+				$('#coverWrapper').animate({
+					left : '-=' + $('#coverWrapper').width()*10,
+				}, 1500);
+			});
+
+			// 작가 노트 관련 애니메이션
+			$("#note").click(function() {
+				$('.noteBtn').toggle();
+				$('#statementWrapper').fadeIn(50);
+				$('#statementWrapper').animate({
+					left : '-=' + $('#statementWrapper').width() + 'px'
+				}, 300);
+			});
+
+			$("#noteClose").click(function() {
+				$('.noteBtn').toggle();				
+				$('#statementWrapper').animate({
+					left : '+=' + $('#statementWrapper').width() + 'px'
+				}, 300);
+				$('#statementWrapper').fadeOut(50);	
+			});
+		</script>
+
+
+		<div id="headerContainer">
+			<div class="headerHoverBox" style="width: 90%; height: 100%; left:0px; top:0px; z-index:2;">
+				<div class="headerBtns">
+					<div id="userBtn"></div>
+				</div>
+				<!-- <div id="navigatorContainer">
+					<div class="navRolling">
+						<div id="navMoveLeft">
+							<p>left</p>
+						</div>
+						<div id="viewPort"><div id="navWrapper"></div></div>
+						<div id="navMoveRight">
+							<p>right</p>
+						</div>
+					</div>
+				</div> -->
+				<!-- <div id="indicatorContainer">
+					<div id="show"></div>
+				</div>
+				<div id="indicator">
+				</div> -->
+			</div>
+		</div>
+		<div id="viewerContainer">
+			<div id="rolling">
+				<div id="workWrapper">
+				</div>
+			</div>
+			<div id="infoBoxWrapper">
+				<div id="bottomTexture">
+				</div>
+				<div id="infoBox">
+					<div id="artInfo">
+						<div id="workTitle"></div>
+						<div id="workYear"></div>
+						<div id="workSize"></div>
+						<div id="workPainter"></div>
+					</div>
+					<div id="infoBoxBtns">
+						<ul>
+							<li id="facebook"></li>
+							<li id="twitter"></li>
+							<!-- <li id="twitter"><%= @reply %></li> -->
+							<!-- join test -->
+							<!-- <button id="join"></button> -->
+							<!-- join test -->
+							<!-- loadworks test -->
+							<!-- <button id="loadWorks"></button> -->
+							<!-- loadworks test -->
+							<!-- share as facebook & twitter -->
+							<!-- <a href="https://www.facebook.com/sharer/sharer.php?u=http://naver.com" target="_blank">
+							 Share on Facebook
+							</a>
+							<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://naver.com" data-text="hi" data-via="hook3748" data-lang="ko">트윗하기</a> -->
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div id="light"></div>
+
+		<script>
+			$("html").css("overflow", "hidden");
+			$("html").css("overflow", "auto");
+			$('#join').click(function() {
+				$.ajax({
+					type: 'POST',
+					url: 'join',
+					data: {
+						username: 'hyogu',
+						email: 'hook3748@gmail.com',
+						password: '123456',
+						url: 'https://www.facebook.com/jehyeok.hyun',
+						profilephoto: 'https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-frc3/538556388763427877296_483574325_n.jpg',
+						shares: '11'
+					}
+				})
+			});
+		</script>
+		<script src="/scripts/code-for-IE.js"></script>
+		<script>
+			$("body").css("overflow", "hidden");
+			var length = <%= @length %>;
+			var work_idx = <%- @work_idx %>;
+			var exhibition_url = <%- @exhibition_url %>;
+			var rollingWidth = $('#rolling').width();
+			var rollingHeihgt = $('#rolling').height();
+			$('#workWrapper').css('width', length+'00%');
+		</script>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		<script src="/scripts/default.js"></script>
+		<script src="/scripts/board-hyogu.js"></script>
+		<script>
+			$('#light').css('width', window.innerWidth);
+			$('#light').css('height', window.innerHeight);
+		</script>
+	</body>	
+</html>

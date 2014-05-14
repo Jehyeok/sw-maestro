@@ -1,0 +1,485 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+body {
+	width: 90%;
+}
+
+.work_body {
+	background-color: #424242;
+}
+
+#section {
+	position: absolute;
+	margin-left: 30px;
+}
+
+#profileContainer {
+	position: absolute;
+    width: 31%;
+    min-width: 423px;
+    height: 100%;
+    background-color: white;
+    border: #c6c4c4 1px solid;
+    -webkit-box-shadow: 12px 7px 12px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow:    12px 7px 12px 0px rgba(0, 0, 0, 0.3);
+    box-shadow:         12px 7px 12px 0px rgba(0, 0, 0, 0.3); 
+    z-index: 10;    
+}
+
+#profileContainer div {
+    display: inline-block;
+}
+
+#profileContainer p {
+    margin: 0;
+    padding: 0;
+}
+
+#profileContainer #profileCardWrapper {
+    width: 100%;
+    min-height: 265px;  
+}
+
+#profileContainer #profileCardWrapper #profileInfoWrapper #profileMainBtn{
+    position: absolute;
+    top: 108px;
+    right: 20px;
+    width: 40px;
+    height: 20px;
+    background-image: url('/images/profile/profile_main.png');
+    background-size: 40px 20px;
+    cursor: pointer;    
+}
+
+#profileContainer #profileCardWrapper #profileInfoWrapper #artistTagEdit {
+    display: none;
+    position: absolute;
+    top: 105px;
+    left: 5px;
+    width: 250px;    
+    height: 20px;
+}
+
+#profileContainer #profileCardWrapper #profileInfoWrapper #artistTagEdit div {
+    display: inline-block;
+}
+
+#profileContainer #profileCardWrapper #profileInfoWrapper #artistTagEdit input {
+    position: relative;
+    top: -5px;
+    width: 200px;
+    height: 20px;
+    border: none;
+}
+
+#profileContainer #profileCardWrapper #profileInfoWrapper #artistTagEdit input:focus {
+    outline: none !important;
+    border: none;
+}
+
+#profileContainer #profileCardWrapper #artistProfileEdit {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    width: 23px;
+    height: 23px;
+    background-image: url('/images/profile/profile_edit.png');
+    background-size: 23px 23px;
+    cursor: pointer;    
+}
+
+#profileContainer #profileCardWrapper #artistProfileEdit:hover {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    width: 23px;
+    height: 23px;
+    background-image: url('/images/profile/profile_edit_highlighted.png');
+    background-size: 23px 23px;
+    cursor: pointer;    
+}
+
+#profileContainer #profileCardWrapper #artistProfileEditComplete {
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    width: 23px;
+    height: 23px;
+    background-image: url('/images/artist/artist_edit_complete.png');
+    background-size: 23px 23px;
+    cursor: pointer;    
+}
+
+#profileContainer #profileCardWrapper #artistProfileEditComplete:hover {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    width: 23px;
+    height: 23px;
+    background-image: url('/images/artist/artist_edit_complete_highlighted.png');
+    background-size: 23px 23px;
+    cursor: pointer;    
+}
+
+#profileDataWrapper {
+    position: absolute;
+    background-color: white;
+    border-top: #c6c4c4 1px solid;
+    width: 100%;
+    min-width: 423px;
+    min-height: 400px;
+}
+
+#profileDataWrapper #artistSocialData {
+	position: absolute;
+    height: 95px;
+    border-right: #c6c4c4 1px solid;
+    border-bottom: #c6c4c4 1px solid;
+    text-align: center;
+}
+
+#profileDataWrapper #artistSocialData div {
+    display: inline-block;
+}
+
+#profileDataWrapper #artistSocialData p {
+    color: #808080;
+    font-size: 12pt;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+#profileDataWrapper #artistSocialData #artistFacebook {
+    margin-right: 15px;
+    position: relative;
+    height: 19px;
+    cursor: pointer;
+}
+
+#profileDataWrapper #artistSocialData #artistFacebook #artistFacebookIcon {
+    position: relative;
+    top: 3px;
+    width: 13px;
+    height: 13px;
+    background-image: url('/images/profile/profile_facebook.png');
+    background-size: 13px 13px;
+}
+
+#profileDataWrapper #artistSocialData #artistTwitter {
+    position: relative;
+    height: 19px;
+    cursor: pointer;
+}
+
+#profileDataWrapper #resume {
+    position: absolute;
+    top: 0px;
+    height: 95px;
+    border-bottom: #c6c4c4 1px solid;
+    text-align: center;
+}
+
+#profileDataWrapper #resume p {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+#profileDataWrapper #resume div {
+    display: inline-block;
+} 
+
+#profileDataWrapper #resume #resumeBtn {
+    position: relative;
+    font-family: "nanumgothic";
+    font-weight: bold;
+    font-size: 20px;
+    color: #807e7e;
+    margin-right: 15px;
+}
+
+#profileDataWrapper #resume #resumeIcon {
+    position: relative;
+    width: 29px;
+    height: 17px;
+    background-image: url('/images/profile/profile_resume_icon.png');
+    background-size: 29px 17px;
+    cursor: pointer;
+}
+
+#profileDataWrapper #resume #resumeEdit {
+    display: none;
+    position: relative;
+    height: 20px;
+    font-family: "nanumgothic";
+    font-weight: bold;
+    font-size: 15px;
+    color: #d5d5d5;
+    cursor: pointer;
+}
+
+#profileDataWrapper #careersWrapper {
+    position: absolute;
+    width: 100%;
+    height: 41%;
+    max-height: 400px;    
+    border-bottom: #c6c4c4 1px solid;
+    overflow: scroll;
+    text-align: center;
+}
+
+#profileDataWrapper #careersWrapper #careerContentWrapper {
+    position: relative;
+    top: 25px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+#profileDataWrapper #careersWrapper #careerContentWrapper div {
+    display: inline-block;
+}
+
+#profileDataWrapper #careersWrapper #careerContentWrapper p {
+    margin: 0;
+    padding: 0;
+}
+
+#profileDataWrapper #careersWrapper #careerContentWrapper .career {
+    width: 100%;
+    color: #807e7e;
+    font-size: 13px;
+    text-align: left;
+}
+
+#profileDataWrapper #careersWrapper #careerContentWrapper .career .careerDate {
+    width: 85px;
+    height: 30px;
+}
+
+#profileDataWrapper #careersWrapper #careerContentWrapper .career .careerContent {
+    position: absolute;
+    height: 30px;
+}
+
+#profileDataWrapper #careersWrapper #careerContentEditWrapper {
+    display: none;
+    position: relative;
+    top: 25px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+#profileDataWrapper #careersWrapper #careerContentEditWrapper .career {
+    position: relative;
+    left: -20px;
+    width: 100%;
+    color: #807e7e;
+    font-size: 13px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+#profileDataWrapper #careersWrapper #careerContentEditWrapper .career .careerRowDeletePlace {
+    width: 13px;
+    height: 12px;
+}
+
+#profileDataWrapper #careersWrapper #careerContentEditWrapper .career .careerRowDelete {
+    display: none;
+    width: 13px;
+    height: 12px;
+    background-image: url('/images/artist/artist_minus.png');
+    background-size: 13px 12px;
+    cursor: pointer;
+}
+
+#profileDataWrapper #careersWrapper #careerContentEditWrapper .career .careerRowDelete:hover {
+    width: 13px;
+    height: 12px;
+    background-image: url('/images/artist/artist_minus_highlighted.png');
+    background-size: 13px 12px;
+    cursor: pointer;
+}
+
+#profileDataWrapper #careersWrapper #careerContentEditWrapper .career .careerDateEdit {
+    position: relative;
+    left: -5px;
+    width: 85px;
+    height: 20px;    
+}
+
+#profileDataWrapper #careersWrapper #careerContentEditWrapper .career .careerDateEdit input {
+    width: 100%;
+    height: 20px;
+    border: none;
+    border-right: #c6c4c4 1px solid;
+}
+
+#profileDataWrapper #careersWrapper #careerContentEditWrapper .career .careerDateEdit input:focus {
+    border: none;
+    border-right: #c6c4c4 1px solid;    
+}
+
+#profileDataWrapper #careersWrapper #careerContentEditWrapper .career .careerContentEdit {
+    position: absolute;
+    height: 20px;
+    margin-left: 10px;
+}
+
+#profileDataWrapper #careersWrapper #careerContentEditWrapper .career .careerContentEdit input {
+    width: 100%;
+    height: 20px;
+    border: none;
+}
+
+#profileDataWrapper #careersWrapper #careerContentEditWrapper .career .careerContentEdit input:focus {
+    border: none;    
+}
+
+#profileDataWrapper #careersWrapper #addCareerBtn {
+    display: none;
+    width: 13px;
+    height: 12px;
+    background-image: url('/images/artist/artist_plus.png');
+    background-size: 13px 12px;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    cursor: pointer;  
+}
+
+#profileDataWrapper #careersWrapper #addCareerBtn:hover {
+    display: none;
+    width: 13px;
+    height: 12px;
+    background-image: url('/images/artist/artist_plus_highlighted.png');
+    background-size: 13px 12px;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    cursor: pointer;  
+}
+
+#profileDataWrapper #profileStatement {
+    position: absolute;
+    width: 100%;
+    color: #807e7e;
+    font-size: 13px;
+    text-align: center;
+}
+
+#profileDataWrapper #profileStatement #profileStatementContent {
+    position: relative;
+    top: 25px;
+    width: 80%;
+    text-align: left;
+}
+
+#profileDataWrapper #profileStatement #profileStatementContent p {
+    margin: 0;
+    padding: 0;
+}
+
+#profileDataWrapper #profileStatement #profileStatementContentEdit {
+    display: none;
+    border: none;
+    position: relative;
+    top: 25px;
+    width: 80%;
+    text-align: left;    
+    color: #5a5b5d;
+}
+
+#content {
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+    min-width: 600px;
+}
+
+#addContentDiv {
+    position: relative;
+    width: 600px;
+    background-color: white;
+    margin-bottom: 10px;
+    margin: 0 auto;
+}
+
+#fileUploadContainer {
+	position: absolute;
+	border-right: #c6c4c4 1px solid;
+    width: 150px;
+    height: 100%;
+    overflow: hidden;
+}
+
+#addContentBtn {
+    position: relative;
+    color: white;
+    text-align: center;
+    top: 110%;
+}
+
+#input_file_hidden {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    width:150px;
+    height: 100%;
+}
+
+#fileUpload {
+	position: absolute;
+	background-image: url(/images/work_list_page/camera_btn.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+input[type="text"] {
+    display: block;
+    position: relative;
+    border: 0;
+    left: 15%;
+    margin-bottom: 0.2em;
+    font-size: 0.9em;
+}
+
+#workInfo {
+	position: absolute;
+	left:150px;
+    width: 500px;
+}
+
+#checkBtn {
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    background-image: url(/images/work_list_page/check_btn.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.work {
+    position: absolute;
+    width: 32%;
+}
+
+.work img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.work .cover {
+    /*display: none;*/
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}

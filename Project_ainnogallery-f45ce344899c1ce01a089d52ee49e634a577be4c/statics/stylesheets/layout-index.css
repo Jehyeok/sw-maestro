@@ -1,0 +1,638 @@
+/* Common Components */
+#index {
+	background:#fff;
+}
+
+
+/* Header */
+
+#index #headerWrapper {
+	height:514px;
+	border-bottom:1px #8da4a9 solid;
+	background:url(/images/index/cover_1.jpg) 50% 50% no-repeat;
+	background-size:cover;
+}
+
+#index #headerWrapper #headerTop {
+	color:#fff;
+	height:80px;
+	background:url(/images/index/b_headerTop.png) repeat-x;
+}
+
+#index #headerWrapper #headerTop h1 {
+	float:left;
+	margin:0;
+	padding:0;
+}
+
+#index #headerWrapper #headerTop h1 a {
+	display:block;
+	width:160px;
+	height:80px;
+	text-indent:-10000px;
+	background: url(/images/index/top_logo.png) 0 0 no-repeat;
+}
+
+#index #headerWrapper #headerTop #accounts {
+	float:right;
+	list-style:none;
+	list-style-image:none;
+}
+
+#index #headerWrapper #headerTop #accounts li {
+	float:left;
+	margin-left:5px;
+}
+
+#index #headerWrapper #headerTop #accounts li a {
+	color:#fff;
+	display:block;
+	height:25px;
+	line-height:25px;
+	margin-top:28px;
+	border-radius:3px;
+	padding:0 9px;
+	font-size:0.86em;
+}
+
+#index #headerWrapper #headerTop #accounts li a#accountLogIn {
+	background: #999;
+}
+
+#index #headerWrapper #headerTop #accounts li a#accountLogIn:hover {
+	color:#fff;
+	background:#777;
+	text-decoration: none;
+}
+
+#index #headerWrapper #headerTop #accounts li a#accountSignUp:hover {
+	text-decoration: none;
+	color:#e0e0e0;
+}
+
+#index #headerWrapper #headerTop #accounts li .accountsInput {
+	background: transparent;
+	color:#fff;
+	height:23px;
+	padding:0 4px;
+	width:120px;
+	border-radius:3px;
+	margin-top:28px;
+	border:1px rgba(255,255,255,0.5) solid;
+	font-family: 'myriad-pro','Helvetica Neue',sans-serif;
+	font-weight:300;
+}
+
+#index #headerWrapper h2 {
+	color:#fff;
+	text-shadow:0px 1px 2px rgba(0,0,0,0.5);
+}
+
+#index #headerWrapper #highlightExWrapper {
+	position:relative;
+	margin-left:-20px;
+}
+
+#index #headerWrapper #highlightExWrapper .artistExCard {
+	width:220px;
+	margin-right:0px;
+	margin-left:20px;
+	height:315px;
+}
+
+
+/* Contents */
+
+#index #contents {
+	padding-bottom:20px;
+}
+
+#index #contents #browse {
+	float:left;
+	width:700px;
+	margin-right:20px;
+}
+
+#index #contents #browse #browseHeader {
+	position:relative;
+}
+
+#index #contents #browse #browseHeader #browseNav {
+	border-top:1px #dadada solid;
+}
+
+#index #contents #browse #browseHeader #browseNav #typeSelect {
+	margin:0;
+	padding:0;
+	list-style: none;
+	list-style-image:none;
+	float:left;
+	font-size:1.29em;
+}
+
+#index #contents #browse #browseHeader #browseNav #typeSelect li {
+	float:left;
+	margin-right:25px;
+}
+
+#index #contents #browse #browseHeader #browseNav #typeSelect li a {
+	color:#acaeae;
+	font-weight:300;
+	line-height:40px;
+}
+
+#index #contents #browse #browseHeader #browseNav #typeSelect li a:hover {
+	color:#888;
+	text-decoration: none;
+}
+
+#index #contents #browse #browseHeader #browseNav #typeSelect li a.selected {
+	color:#4d5150;
+	font-weight:600;
+}
+
+#index #contents #browse #browseHeader #browseNav #nav-filterWrapper {
+	padding-top:8px;
+}
+
+#index #contents #browse #browseHeader #browseNav #nav-filterWrapper a#filterOpener {
+	border-radius:3px;
+	color:#8e8e8e;
+	border:1px #dadada solid;
+	line-height:22px;
+	display:block;
+	padding:0 5px;
+}
+
+#index #contents #browse #browseHeader #browseNav #nav-filterWrapper #nav-filter {
+	display:none;
+	position:absolute;
+	z-index:50;
+	background: #f0f0f0;
+	border-radius:3px;
+	top:61px;
+	left:420px;
+	width:278px;
+	padding-bottom:9px;
+	border:1px #dadada solid;
+	box-shadow: 0px 2px 3px #666;
+}
+
+#index #contents #browse #browseHeader #browseNav #nav-filterWrapper #nav-filter h4 {
+	font-weight:bold;
+	color:#999;
+	font-size:0.86em;
+	line-height:1.3;
+	margin:0;
+	padding:9px;
+	height:auto;
+}
+
+#index #contents #browse #browseHeader #browseNav #nav-filterWrapper #nav-filter ul {
+	background:#fff;
+	border-top:1px #dadada solid;
+	list-style:none;
+	list-style-image: none;
+}
+
+#index #contents #browse #browseHeader #browseNav #nav-filterWrapper #nav-filter ul li {
+	border-bottom:1px #dadada solid;
+}
+
+#index #contents #browse #browseHeader #browseNav #nav-filterWrapper #nav-filter ul li a {
+	display:block;
+	padding:5px 9px;
+	color:#666;
+}
+
+#index #contents #browse #browseHeader #browseNav #nav-filterWrapper #nav-filter ul li a:hover {
+	color:#444;
+	background: #f7f7f7;
+}
+
+#index #contents #browse #browseHeader #browseNav #nav-filterWrapper a#filterOpener:hover {
+	color:#666;
+	text-decoration: none;
+	background:#f4f4f4;
+}
+
+#index #contents #browse #browseHeader #browseNav #nav-filterWrapper a#filterOpener.selected {
+	color:#fff;
+	background:#49d4f6;
+	border:1px #49d4f6 solid;
+}
+
+#index #contents #browse #artists {
+	display:none;
+}
+
+#index #contents #browse #browseContents, #index #contents #browse #artistBrowseContents {
+	list-style:none;
+	list-style-image:none;
+	margin:0 0 0 -20px;
+	padding:0;
+}
+
+#index #contents #browse #browseContents li, #index #contents #browse #artistBrowseContents li {
+	margin-left:20px;
+	width:220px;
+	margin-bottom:20px;
+	cursor:pointer;
+	float:left;
+	position:relative;
+}
+
+#index #contents #browse #exhibitions #browseContents li {
+	border-bottom:1px #eaeaea solid;
+	height:219px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+#index #contents #browse #exhibitions #browseContents li:hover {
+	background: #f4f4f4;
+}
+
+#index #contents #browse #browseContents li .offlineBadge {
+	position:absolute;
+	top:165px;
+	left:165px;
+	width:55px;
+	height:55px;
+	text-indent:-10000px;
+	background:url(/images/index/badge_offline.png) no-repeat;
+}
+
+#index #contents #browse #browseContents li .browseImg {
+	height:135px;
+	border-radius:3px;
+	background-size:cover;
+	margin-bottom:10px;
+}
+
+#index #contents #browse #browseContents li h3 {
+	font-size:0.86em;
+	margin:0;
+	padding:0;
+	line-height:1.5;
+	color:#444;
+}
+
+#index #contents #browse #browseContents li .schedule {
+	font-size:0.86em;
+	color:#8e8e8e;
+	letter-spacing: 1px;
+	margin-bottom:15px;
+	line-height:1.3;
+}
+
+#index #contents #browse #exhibitions #browseContents li .user {
+	font-size:0.86em;
+	font-weight:600;
+	line-height: 1.3;
+}
+
+#index #contents #browse #exhibitions #browseContents li .user .user-icon {
+	display:inline-block;
+	width:10px;
+	height:10px;
+	border:1px #dadada solid;
+	border-radius:6px;
+	overflow:hidden;
+	padding:0;
+	font-size:0;
+	line-height:0;
+	margin-right:5px;
+}
+
+#index #contents #browse #exhibitions #browseContents li .user .user-icon img {
+	width:10px;
+	height:10px;
+	margin:0;
+}
+
+#index #contents #browse #artists #artistBrowseContents li {
+	border-top:1px #dadada solid;
+}
+
+#index #contents #browse #artists #artistBrowseContents li a.user {
+	padding:6px 0 10px;
+	height:44px;
+	display:block;
+	line-height:1.2;
+	background:url(/images/index/artist_arrow.png) 200px 50% no-repeat;
+}
+
+#index #contents #browse #artists #artistBrowseContents li a.user:hover {
+	background-color:#f0f0f0;
+	text-decoration: none;
+}
+
+#index #contents #browse #artists #artistBrowseContents li a.user .user-icon {
+	width:40px;
+	height:40px;
+	margin-top:3px;
+	float:left;
+	margin-right:10px;
+}
+
+#index #contents #browse #artists #artistBrowseContents li a.user .user-icon img {
+	width:40px;
+	height:40px;
+}
+
+#index #contents #browse #artists #artistBrowseContents li a.user .user-name {
+	font-size:1.71em;
+	font-weight:600;
+	letter-spacing: -1px;
+	color:#444;
+	overflow:hidden;
+	display:block;
+	width:140px;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+}
+
+#index #contents #browse #artists #artistBrowseContents li a.user .user-desc {
+	display:block;
+	font-size:0.86em;
+	font-weight:600;
+	color:#8e8e8e;
+}
+
+#index #contents #browse #artists #artistBrowseContents li .recentExhibition {
+	background-size:cover;
+	height:70px;
+}
+
+#index #contents #browse #artists #artistBrowseContents li .comingsoon {
+	background:#333;
+}
+
+#index #contents #browse #artists #artistBrowseContents li .comingsoon .exhibitionTitle {
+	text-align:center;
+	display:block;
+	padding-top:25px;
+	font-size:0.86em;
+	color:#ccc;
+}
+
+#index #contents #browse #artists #artistBrowseContents li .recentExhibition a {
+	background:rgba(0,0,0,0.25);
+	display:block;
+	height:50px;
+	padding-top:20px;
+	font-size:0.86em;
+	color:#fff;
+	text-shadow:0px 1px 3px #333;
+}
+
+#index #contents #browse #artists #artistBrowseContents li .recentExhibition a:hover {
+	background:rgba(0,0,0,0.6);
+	text-decoration: none;
+}
+
+#index #contents #browse #artists #artistBrowseContents li .recentExhibition a .exhibitionTitle {
+	display:block;
+	text-align:center;
+}
+
+#index #contents #browse #artists #artistBrowseContents li .recentExhibition a .schedule {
+	display:block;
+	text-align:center;
+	color:#cccccc;
+}
+
+#index #contents #browse a#browseMore {
+	display:block;
+	text-align: center;
+	border-top: 1px #dadada solid;
+	border-bottom:1px #eaeaea solid;
+	padding:10px 0;
+	background:#f7f7f7;
+	color:#8e8e8e;
+}
+
+#index #contents #browse a#browseMore:hover {
+	color:#666;
+	text-decoration: none;
+	background:#f0f0f0;
+}
+
+
+#index #contents #activities {
+	float:left;
+	width:220px;
+	margin-right:20px;
+}
+
+#index #contents #activities #activityAnalytics {
+	height:59px;
+	background:#f7f7f7;
+	border-top:1px #dadada solid;
+}
+
+#index #contents #activities #activityAnalytics div {
+	float:left;
+	width:73px;
+	height:59px;
+	border-right:1px #dadada solid;
+	text-align: center;
+	font-size:0.86em;
+	color:#8e8e8e;
+}
+
+#index #contents #activities #activityAnalytics div strong {
+	display: block;
+	color:#1ecbf6;
+	font-size:2em;
+	margin-top:10px;
+	font-weight:600;
+	letter-spacing: -1px;
+	margin-bottom:2px;
+	line-height:1;
+}
+
+#index #contents #activities #activityAnalytics div#totalExhibitions {
+	width:72px;
+}
+
+#index #contents #activities #activityAnalytics div#totalWorks {
+	border-right:none;
+}
+
+#index #contents #activities #activitiesList {
+	list-style: none;
+	list-style-image: none;
+	height:502px;
+	overflow-y:scroll;
+	border-bottom:1px #dadada solid;
+}
+
+#index #contents #activities #activitiesList li {
+	padding:9px 0;
+	border-top:1px #dadada solid;
+	font-size:0.86em;
+	color:#444;
+	height:40px;
+}
+
+#index #contents #activities #activitiesList li .activityPhoto {
+	width:40px;
+	height:40px;
+	display:block;
+	float:left;
+	margin-right:10px;
+}
+
+#index #contents #activities #activitiesList li a {
+	color:#3b95ac;
+}
+
+#index #contents #activities #activitiesList li a:hover {
+	color:#1ecbf6;
+	text-decoration: none;
+}
+
+#index #contents #info {
+	float:right;
+	width:220px;
+}
+
+#footer {
+	border-top:1px #dadada solid;
+	padding:15px 0;
+	font-size:0.86em;
+	color:#888;
+}
+
+#footer #footerCopy {
+	font-size: 1.18em;
+	color:#555;
+}
+
+#footer p {
+	margin-bottom:0;
+}
+
+#footer #footerLinks {
+	margin-top:10px;
+	list-style:none;
+	list-style-image:none
+}
+
+#footer #footerLinks li {
+	margin-right:10px;
+	float:left;
+}
+
+
+#index #signupBox {
+	background:#f0f0f0;
+	height:440px;
+}
+
+#index #signupBox #signupHeader {
+	padding:15px;
+	border-bottom:1px #dadada solid;
+}
+
+#index #signupBox #signupHeader h1 {
+	font-size:2em;
+	font-weight:300;
+	padding:0;
+	margin:0;
+}
+
+#index #signupBox #signupHeader p {
+	font-size:0.86em;
+	color:#8e8e8e;
+}
+
+#index #signupBox #signupFormWrapper {
+	padding:15px 14px 0 15px;
+	background: #fff;
+	border-bottom:1px #dadada solid;
+	border-right:1px #dadada solid;
+	width:290px;
+	height:300px;
+	float:left;
+}
+
+#index #signupBox #signupFormWrapper label {
+	color:#666;
+	font-weight:bold;
+}
+
+#index #signupBox #signupFormWrapper .status {
+	float:right;
+	font-size:0.86em;
+	color:#999;
+	padding-top:1px;
+	font-style:italic;
+	padding-left:13px;
+	background:url(/images/index/signup_status.png) left 6px no-repeat;
+}
+
+#index #signupBox #signupFormWrapper .status-ok {
+	background-position:0 -44px;
+	color:#1ecbf6;
+}
+
+#index #signupBox #signupFormWrapper .status-error {
+	background-position:0 -94px;
+	color:#f822be;
+}
+
+#index #signupBox #signupFormWrapper input {
+	display:block;
+	margin:5px 0 15px;
+	border:1px #dadada solid;
+	border-radius:3px;
+	background:#fff;
+	padding:4px;
+	width:280px;
+}
+
+#index #signupBox #EULAWrapper {
+	background:#fff;
+	padding:15px 15px 0;
+	height:300px;
+	float:left;
+	width:290px;
+	border-bottom:1px #dadada solid;
+}
+
+#index #signupBox #EULAWrapper textarea {
+	clear:both;
+	font-size:0.86em;
+	margin:5px 0 9px;
+	height:96px;
+	border:1px #dadada solid;
+	border-radius:3px;
+	background:#fff;
+	padding:4px;
+	width:280px;
+}
+
+#index #signupBox #EULAWrapper .eula_checkbox {
+	float:right;
+	font-size:0.86em;
+	color:#999;
+	font-style:italic;
+}
+
+#index #signupBox #new_user_submit {
+	width:610px;
+	height:39px;
+	margin:5px 15px;
+	border-radius:3px;
+	cursor:pointer;
+	background:#4ca5cf;
+	color:#fff;
+	border:1px #dadada solid;
+}
+
+#index #signupBox #new_user_submit:hover {
+	background:#29a6e1;
+}

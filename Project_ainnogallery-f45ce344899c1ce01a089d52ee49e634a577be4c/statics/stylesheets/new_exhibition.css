@@ -1,0 +1,380 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+body {
+	width: 90%;
+}
+
+.work_body {
+	background-color: #424242;
+}
+
+#section {
+	position: absolute;
+	margin-left: 30px;
+}
+
+#exInfoContainer {
+	position: absolute;
+    width: 31%;
+    min-width: 423px;
+    height: 100%;
+    background-color: white;
+    -webkit-box-shadow: 12px 7px 12px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow:    12px 7px 12px 0px rgba(0, 0, 0, 0.3);
+    box-shadow:         12px 7px 12px 0px rgba(0, 0, 0, 0.3); 
+    z-index: 10;    
+}
+
+#exInfoContainer div {
+    display: inline-block;
+}
+
+#exInfoContainer p {
+    margin: 0;
+    padding: 0;
+}
+
+#exInfoContainer #exPreviewBtn {
+    position: absolute;
+    right: 55px;
+    top: 12px;
+    width: 28px;
+    height: 23px;
+    background-image: url('/images/newex/newex_preview.png');
+    background-size: 28px 20px;
+    cursor: pointer;
+}
+
+#exInfoContainer #exPreviewBtn p {
+    position: absolute;
+    left: -5px;
+    top: 23px;
+    font-size: 10px;
+    color: #9f9f9f;
+}
+
+#exInfoContainer #exPreviewBtn:hover {
+    position: absolute;
+    right: 55px;
+    top: 12px;
+    width: 28px;
+    height: 20px;
+    background-image: url('/images/newex/newex_preview_highlighted.png');
+    background-size: 28px 20px;
+    cursor: pointer;
+}
+
+#exInfoContainer #exPreviewBtn:hover p {
+    position: absolute;
+    left: -5px;
+    top: 23px;
+    font-size: 10px;
+    color: #39d7ff;
+}
+
+#exInfoContainer #makeExComplete {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    width: 20px;
+    height: 20px;
+    background-image: url('/images/artist/artist_edit_complete.png');
+    background-size: 20px 20px;
+    cursor: pointer;    
+}
+
+#exInfoContainer #makeExComplete p {
+    position: absolute;
+    left: -5px;
+    top: 23px;
+    font-size: 10px;
+    color: #9f9f9f;
+}
+
+#exInfoContainer #makeExComplete:hover {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    width: 20px;
+    height: 20px;
+    background-image: url('/images/artist/artist_edit_complete_highlighted.png');
+    background-size: 20px 20px;
+    cursor: pointer;    
+}
+
+#exInfoContainer #makeExComplete:hover p {
+    position: absolute;
+    left: -5px;
+    top: 23px;
+    font-size: 10px;
+    color: #39d7ff;
+}
+
+#exInfoContainer #exCardImageWrapper {
+    width: 100%;
+    min-height: 265px;
+    text-align: center;
+}
+
+#exInfoContainer #exCardImageWrapper #exCardImageEdit {
+    position: relative;
+    top: 30%;
+    width: 80%;
+    max-width: 410px;
+    height: 100%;
+    text-align: left;
+}
+
+#exInfoContainer #exCardImageWrapper #exCardImageEdit #exCardPreview {
+    position: absolute;
+    left: 5px;
+    z-index: 5;
+    width: 34%;
+    background-color: white;
+    -webkit-box-shadow: 0px 1px 10px 0px rgba(50, 50, 50, 0.2);
+    -moz-box-shadow:    0px 1px 10px 0px rgba(50, 50, 50, 0.2);
+    box-shadow:         0px 1px 10px 0px rgba(50, 50, 50, 0.2);    
+}
+
+#exInfoContainer #exCardImageWrapper #exCardImageEdit #exCardPreview #exCardImagePreview {
+    position: relative;
+    top: 3px;
+    width: 100%;
+    height: 50%;
+    background-color: white;
+}
+
+#exInfoContainer #exCardImageWrapper #exCardImageEdit #exCardPreview #exCardInfoPreview {
+    position: relative;
+    top: -3px;    
+    width: 100%;
+    height: 50%;
+    background-color: #3b3b3b;
+}
+
+#exInfoContainer #exCardImageWrapper #exCardImageEdit #exCardImageUpload {
+    position: absolute;
+    border: #e9e7e7 1px dashed;
+    max-width: 410px;
+}
+
+#exInfoContainer #exCardImageWrapper #exCardImageEdit #exCardImageUpload #exCardImageUploadBox {
+    position: absolute;
+    top: 5%;
+    width: 97%;
+    height: 90%;
+    cursor: pointer;
+    text-align: center;
+    border: #e9e7e7 1px solid;
+}
+
+#exInfoContainer #exCardImageWrapper #exCardImageEdit #exCardImageUpload #exCardImageUploadBox #exCardImageUploadBtn {
+    position: relative;
+    width: 32px;
+    height: 22px;
+    background-image: url('/images/newex/newex_image_upload.png');
+    background-size: 32px 22px;
+}
+
+#exInfoContainer #exCardImageWrapper #exCardImageEdit #exCardImageUpload #exCardImageUploadBox #exCardImageUploadBtn:hover {
+    position: relative;
+    width: 32px;
+    height: 22px;
+    background-image: url('/images/newex/newex_image_upload_highlighted.png');
+    background-size: 32px 22px;
+}
+
+#exInfoDataWrapper {
+    position: absolute;
+    background-color: white;
+    border-top: #e9e7e7 1px solid;
+    width: 100%;
+    min-width: 423px;
+    min-height: 400px;
+}
+
+#exInfoDataWrapper #exTitleInfo {
+	position: absolute;
+    height: 80px;
+    border-right: #e9e7e7 1px solid;
+    border-bottom: #e9e7e7 1px solid;
+    text-align: center;
+}
+
+#exInfoDataWrapper #exTitleInfo p {
+    display: inline-block;
+}
+
+#exInfoDataWrapper #exTitleInfo #exTitle input {
+    position: relative;
+    margin-top: 20px;
+    width: 110px;
+    color: #8a8a8a;
+    font-size: 14px;
+}
+
+#exInfoDataWrapper #exTitleInfo #exTitle input:focus {
+    outline: none !important;
+/*    border: none; */
+}
+#exInfoDataWrapper #exTitleInfo #exTitle p {
+    color: #8a8a8a;
+    font-size: 14px;
+}
+
+#exInfoDataWrapper #exTitleInfo #exTag {
+    display: block;
+    color: #39d7ff;
+    font-size: 11px;
+}
+
+#exInfoDataWrapper #exScheduleInfo {
+    position: absolute;
+    top: 0px;
+    height: 80px;
+    border-bottom: #e9e7e7 1px solid;
+    text-align: center;
+}
+
+#exInfoDataWrapper #exScheduleInfo #exSchedule {
+    position: relative;
+    margin-top: 30px;
+    color: #8a8a8a;
+    font-size: 14px;
+}
+
+#exInfoDataWrapper #exArtWorksWrapper {
+    position: relative;
+    width: 100%;
+    height: 31%;
+    max-height: 400px;    
+    border-bottom: #e9e7e7 1px solid;
+    text-align: center;
+    overflow: hidden;
+}
+
+#exInfoDataWrapper #exArtWorksWrapper #exArtWorksContainerMoveLeft {
+    position: absolute;
+    z-index: 10;
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    opacity: 0.2;
+    cursor: pointer;
+}
+
+#exInfoDataWrapper #exArtWorksWrapper #exArtWorksContainerMoveRight {
+    position: absolute;
+    float: right;
+    z-index: 10;
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    opacity: 0.2;
+    cursor: pointer;
+}
+
+#exInfoDataWrapper #exArtWorksWrapper #exArtWorksContainer {
+    position: relative;
+}
+
+#exInfoDataWrapper #exArtWorksWrapper #exArtWorksContainer div {
+      background: #AAA;
+      position: absolute;
+}
+
+#exInfoDataWrapper #exArtWorksWrapper #exArtWorksContainer .ss-placeholder-child {
+    background: transparent;
+    border: 1px dashed #AAA;
+}
+
+
+#exInfoDataWrapper #exStatement {
+    position: absolute;
+    width: 100%;
+    color: #807e7e;
+    font-size: 13px;
+    text-align: center;
+}
+
+#exInfoDataWrapper #exStatement #exStatementContent {
+    margin-top: 25px;
+    width: 80%;
+    height: 80%;
+    text-align: left;
+}
+
+#content {
+    position: relative;
+    width: 900px;
+    margin-top: 50px;
+}
+
+#addContentDiv {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+#fileUploadContainer {
+	position: absolute;
+	border-right: #e9e7e7 1px solid;
+    width: 150px;
+    height: 100%;
+    overflow: hidden;
+}
+
+#addContentBtn {
+    position: relative;
+    color: white;
+    text-align: center;
+    top: 110%;
+}
+
+#input_file_hidden {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    width:150px;
+    height: 100%;
+}
+
+#fileUpload {
+	position: absolute;
+	background-image: url(/images/work_list_page/camera_btn.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+input[type="text"] {
+    display: block;
+    position: relative;
+    border: 0;
+    left: 15%;
+    margin-bottom: 0.2em;
+    font-size: 0.9em;
+}
+
+#workInfo {
+	position: absolute;
+	left:150px;
+    width: 500px;
+}
+
+#checkBtn {
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    background-image: url(/images/work_list_page/check_btn.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.work {
+    position: absolute;
+    width: 220px;
+}

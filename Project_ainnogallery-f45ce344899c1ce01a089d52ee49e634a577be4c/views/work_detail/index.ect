@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= @title %></title>
+	<link rel="stylesheet prefetch" href="/stylesheets/common-stargt.css" />
+</head>
+<body>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="/scripts/common-stargt.js"></script>
+	<script>
+		$(document).ready(function() {
+			Common.loadJSFile('/scripts/work_detail/work_detail-stargt.js', 'body', 'js_workdetail');
+			WorkDetail.show({
+					work_hash: '<%= @work_hash %>',
+					call_where: '<%= @call_where %>',
+					callback_for_end: function() {
+						console.log("작품 상세보기 창 닫힘");
+					}
+				});// TODO: 창이 닫혔을 경우 발생 시킬 콜백 여기에 추가
+		});
+
+		$(window).load(function() {
+			Common.init();
+			Common.addEventGoUserHome('<%= @user_url %>');
+		});
+	</script>
+</body>
+</html>

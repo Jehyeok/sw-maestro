@@ -1,0 +1,1292 @@
+@charset "utf-8";
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+/* font */
+/*@font-face {
+	font-family: 'NanumBarunGothic';
+	font-style: normal;
+	src: url(file:///users/jehyeok/Documents/workspace/node/ainnogallery/public/fonts/NanumBarunGothic.otf);
+}*/
+
+/* common */
+html, body {
+	height: 100%;
+}
+
+body {
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 0;
+	padding: 0;
+	font-family: 'nanumgothic';
+	
+}
+
+img {
+	border: none;
+}
+
+ul {
+	display: table;
+	list-style: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	display: table-cell;
+	padding: .8em 0;
+	text-align: center;
+}
+
+.clearboth {
+	clear: both;
+}
+
+.button {
+	cursor: pointer;
+}
+
+a:link {
+	text-decoration: none;
+	color: #666666;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #666666;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #666666;
+}
+
+#ainnoLogoBtn {
+	position: absolute;
+	left: 40px;
+	width: 42px;
+	height: 72px;
+	background-image: url("/images/cover/cover_logo.png");
+	background-size: 42px 72px;
+	background-repeat: no-repeat;	
+	z-index: 20;
+	cursor: pointer;
+}
+
+/* gallery */
+/* cover page */
+#coverWrapper {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 11;
+	background-image: url("/images/cover/cover_background.png");
+	background-size: cover;	
+}
+
+#coverCard {
+	position: absolute;
+	bottom: 0;
+	left: 42px;
+	text-align: center;
+	width: 320px;
+	height: 380px;
+	-webkit-box-shadow: 0px 6px 19px rgba(30, 30, 30, 0.79);
+	-moz-box-shadow:    0px 6px 19px rgba(30, 30, 30, 0.79);
+	box-shadow:         0px 6px 19px rgba(30, 30, 30, 0.79);	
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+#exhibitionMoveLeft{
+	width:30px;
+	height:55%;
+	position: fixed;
+	z-index: 5;
+	cursor: pointer;
+}
+
+#exhibitionMoveRight{
+	width:30px;
+	height:55%;
+	position: fixed;
+	z-index: 5;
+	cursor: pointer;
+}
+
+#coverCardImage {
+	width: 320px;
+	height: 200px;
+	background-image: url("/images/cover/cover_card_bg.png");
+	background-size: 100%;
+}
+
+#coverCardDetails {
+	width: 320px;
+	height: 180px;
+	background-color: #3b3b3b;
+}
+
+#beforeHoverWrapper {
+	width: 320px;
+	height: 180px;
+}
+
+#exTitle {
+	font-size: 11pt;
+	color: #f9f9f9;
+	padding-top: 65px;
+}
+
+#exSchedule {
+	font-size: 10pt;
+	color: #aaaaaa;
+}
+
+#hoverWrapper {
+	width: 320px;
+	height: 180px;
+	display: none;
+}
+
+#hoverWrapper div {
+	display: inline-block;
+}
+
+#hoverWrapper .coverShare {
+	display: block;
+}
+
+#statementBtn {
+	width: 34.6px;
+	height: 18px;
+	background-image: url("/images/cover/cover_note.png");
+	background-size: 34.6px 17px;
+	background-repeat: no-repeat;	
+	margin-top: 65px;
+	margin-right: 11px;
+	cursor: pointer;
+}
+
+.enterEx {
+	width: 34.6px;
+	height: 18px;
+	background-image: url("/images/cover/cover_enter.png");
+	background-size: 34.6px 18px;
+	background-repeat: no-repeat;	
+	margin-top: 65px;
+	cursor: pointer;
+}
+/*
+.moveEx {
+	width: 34.6px;
+	height: 18px;
+	background: #3b3b3b url("/images/cover/cover_enter.png") 50% 65px no-repeat;
+	background-size: 34.6px 18px;
+	padding-top: 65px;
+	margin:0 auto;
+	cursor: pointer;
+}
+*/
+.coverShare {
+	margin-top: 25px;
+}
+
+.coverFacebook {
+	width: 13.5px;
+	height: 14px;
+	background-image: url("/images/cover/cover_facebook.png");
+	background-size: 13px 13px;
+	background-repeat: no-repeat;	
+	cursor: pointer;
+	margin-right: 3px;
+}
+
+.coverPinterest {
+	width: 13.5px;
+	height: 14px;
+	background-image: url("/images/cover/cover_pinterest.png");
+	background-size: 13px 13px;
+	background-repeat: no-repeat;	
+	cursor: pointer;
+	margin-right: 3px;
+}
+
+.coverTwitter {
+	width: 13.5px;
+	height: 14px;
+	background-image: url("/images/cover/cover_twitter.png");
+	background-size: 13px 13px;
+	background-repeat: no-repeat;	
+	cursor: pointer;
+}
+
+#noteClickedWrapper {
+	width: 320px;
+	height: 180px;
+	display: none;
+	position: absolute;
+	top: 200px;
+	z-index: 12;
+	background-color: #3b3b3b;	
+}
+
+#noteClickedWrapper div {
+	display: inline-block;
+}
+
+#noteClickedWrapper .coverShare {
+	display: block;
+}
+
+#coverBtn {
+	width: 34.6px;
+	height: 17px;
+	background-image: url("/images/cover/cover_cover.png");
+	background-size: 34.6px 16px;
+	background-repeat: no-repeat;	
+	margin-top: 65px;
+	margin-right: 11px;
+	cursor: pointer;
+}
+
+
+#statementWrapper {
+	display: none;
+	position: absolute;
+	left: 100%;
+	height: 100%;
+	width: 945px;
+	background-color: white;
+	border-left: 1px solid #c6c4c4;
+}
+
+/* header */
+.headerWrapper {
+	margin: 0 auto;
+	height: 50px;
+	background-color: white;
+	background-image: url(/images/전시관-페이지_0001_헤더바.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+}
+
+.headerWrapper div {
+	display: inline-block;
+}
+
+.headerBtns {
+	text-align: center;
+	width: 300px;
+	height: 50px;
+}
+
+.headerBtns .dropdown-menu {
+	width: 300px;
+}
+
+#navigatorContainer {
+	float: right;
+	width: 600px;
+	height: 50px;
+}
+
+#navigatorContainer div {
+	display: inline-block;
+}
+
+.navRolling {
+	width: 600px;
+}
+
+#navMoveLeft {
+	background-color: red;
+	width: 20px;
+	height: 20px;
+	float: left;
+}
+
+#navMoveRight {
+	background-color: red;
+	width: 20px;
+	height: 20px;
+	float: right;
+}
+
+#viewPort {
+	width: 555px;
+	position: relative;
+	overflow: hidden;
+}
+
+#navWrapper {
+	position: relative;
+	width: 1000px;
+	overflow: auto;
+}
+
+.work_thumb {
+	width: 20px;
+	background-color: green;
+	margin : 6px;
+}
+
+#main_thumb  {
+	background-color: black;
+}
+
+#indicator {
+	background-color: green;
+	height: 25px;
+	margin-bottom: 10px;
+	width: 0;
+}
+
+/* workWrapper */
+#viewerContainer {
+	height: 85%;
+}
+
+#rolling {
+	position: relative;
+	width: 60%;
+	/*min-width: 500px;*/
+	height: 75%;
+	margin: 0 auto;
+}
+
+#workWrapper {
+	position: relative;
+	height: 100%;
+	text-align: center;
+	overflow: hidden;
+}
+
+.work {
+	float: left;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.work .inner {
+	position: relative;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.work_thumb .inner {
+	position: relative;
+	width: 100%;
+	background-color: blue;
+	margin: 0 auto;
+}
+
+#mainWork {
+	background-image: url(/images/전시관-페이지_0004s_0001_조명.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.workLabel1 {
+	background-image: url(/images/전시관-페이지_0002s_0003_Layer-9.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 100px;
+	height: 110px;
+	left: 110%;
+	top: 40%;
+	z-index: 2;
+}
+
+.workLabel2 {
+	background-image: url(/images/전시관-페이지_0002s_0001_작가노트.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	width: 75px;
+	height: 90px;
+	z-index: 5;
+}
+
+.workLabel3 {
+	background-image: url(/images/전시관-페이지_0002s_0002_Layer-11.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 80px;
+	height: 90px;
+	z-index: 10;
+}
+
+/* infoBoxWrapper */
+#infoBoxWrapper {
+	position: relative;
+	clear: both;
+	height: 25%;
+}
+
+#infoBox {
+	position: absolute;
+	margin: auto;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 40%;
+	height: 90%;
+	z-index: 10;
+	background-image: url(/images/전시관-페이지_0001s_0000_하단-박스.png);
+	background-size: cover;
+}
+
+#infoBox div {
+	display: inline-block;
+
+}
+
+#artInfo {
+	padding-top: 20px;
+	float: left;
+	width: 50%;
+	padding: 5%;
+	margin: 3%;
+}
+
+#infoBoxBtns {
+	float: right;
+	width: 15%;
+	padding: 2%;
+	margin-top: 3%;
+}
+
+#infoBoxBtns li {
+	display: list-item;
+	background-size: contain;
+	background-repeat: no-repeat;
+	float: left;
+	width: 30%;
+	margin-right: 20%;
+}
+
+#bottomTexture {
+	position: absolute;
+	width: 100%;
+	height: 30%;
+	z-index: 5;
+	background-image: url(/images/전시관-페이지_0003_바닥-텍스쳐.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	bottom: 0;
+}
+
+#workTitle {
+	background-image: url(/images/전시관-페이지_0000s_0003_꽃다운-스무살.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width:100%;
+	height:20px;
+}
+
+#workYear {
+	background-image: url(/images/전시관-페이지_0000s_0001_2007,.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width:18%;
+	height:15px;
+}
+
+#workSize {
+	background-image: url(/images/전시관-페이지_0000s_0002_28cm-X-16cm.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width:50%;
+	height:15px;
+}
+
+#workPainter {
+	background-image: url(/images/전시관-페이지_0000s_0000_,-한재권.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width:20%;
+	height:15px;
+}
+
+#facebook {
+	background-image: url(/images/전시관-페이지_0001s_0000s_0000_Facebook.png);
+}
+
+#twitter {
+	background-image: url(/images/전시관-페이지_0001s_0000s_0001_Twitter.png);
+}
+
+
+/* ARTIST PAGE */
+#artistPageUpperContentWrapper {
+	position: relative;
+	width: 100%;
+	height: 44%;
+	min-height: 265px;
+	background-color: white;
+	border-bottom: #c6c4c4 1px solid;
+	-webkit-box-shadow: 0px 7px 38px 0px rgba(24, 8, 12, 0.4);
+	-moz-box-shadow:    0px 7px 38px 0px rgba(24, 8, 12, 0.4);
+	box-shadow:         0px 7px 38px 0px rgba(24, 8, 12, 0.4);	
+	z-index: 10;
+}
+
+#artistPageUpperContentWrapper div {
+	display: inline-block;
+}
+
+#profileCardWrapper {
+	position: absolute;
+	width: 31%;
+	min-width: 423px;
+	min-height: 265px;	
+	border-right: #c6c4c4 1px solid; 
+}
+
+#artistPageLogo {
+	position: absolute;
+	left: 15px;
+	width: 45px;
+	height: 55px;
+	background-image: url("/images/cover/cover_logo.png");
+	background-size: 45px 55px;
+}
+
+#profileInfoWrapper {
+	position: absolute;
+	width: 80%;
+	height: 213px;
+	left: 80px;
+	top: 45%;
+}
+
+#profilePhoto {
+	width: 100px;
+	height: 100px;
+	background-image: url('/images/artist/artist_profile_photo.png');
+	background-size: 98px 98px; 
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	overflow: hidden;	
+}
+
+#artistName {
+	position: absolute;
+	top: 80px;
+	width: 280px;
+	font-size: 21pt;
+	font-family: "NanumBarunGothic";
+	font-weight: bolder;
+	color: #444;
+	font-weight: 600;
+}
+
+#profileDetailBtn {
+	position: absolute;
+	top: 108px;
+	right: 20px;
+	width: 40px;
+	height: 20px;
+	background-image: url('/images/artist/artist_profile.png');
+	background-size: 40px 20px;
+	cursor: pointer;
+}
+
+#artistTagWrapper {
+	position: absolute;
+	top: 105px;
+	left: 5px;
+	width: 250px;
+}
+
+.artistTag {
+	margin-right: 15px;
+}
+
+.artistTag p {
+	margin: 0;
+	padding: 0;
+	font-size: 10pt;
+	color: #9b9a9a;
+	cursor: pointer;
+}
+
+#artistPageShare {
+	position: absolute;
+	right: 0;
+	width: 57px;
+	height: 44px;
+	background-image: url('/images/artist/artist_share.png');
+	background-size: 57px 44px;
+	border-left: #f0efef 1px solid;
+	cursor: pointer;
+}
+
+#interactionCardWrapper {
+	min-width: 180px;
+	position: absolute;
+	border-right: #c6c4c4 1px solid;
+}
+
+#interactionCardWrapper div {
+	display: block;
+	text-align: center;
+}
+
+#socialReply {
+	padding-top: 8%;
+	width: 100%;
+	height: 63%;
+}
+
+.replyWrapper {
+	font-size: 9pt;
+	width: 76%;
+	margin: 0 auto;
+	margin-bottom: 10%;
+}
+
+.replyFrom p {
+	color: #4edaff;
+	text-align: left;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+.replyContent p {
+	color: #969696;
+	text-align: left;
+	margin: 0;
+	padding: 0;
+}
+
+.replyTime p {
+	color: #8c8c8c;
+	text-align: right;
+	font-size: 6pt;
+	margin: 0;
+	padding: 0;
+}
+
+#recentFeedback {
+	position: absolute;
+	right: 0px;
+	bottom: 0;
+	width: 90px;
+	height: 26px;
+	background-image: url('/images/artist/artist_recent_feedback.png');
+	background-size: 90px 26px;
+}
+
+#recentFeedback p {
+	text-align: right;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 6pt;
+}
+
+#analyticsCardWrapper {
+	min-width: 195px;
+	position: absolute;
+	border-right: #c6c4c4 1px solid;
+}
+
+#analyticsCardWrapper>#titleWork {
+	height: 65%
+}
+
+#analyticsCardWrapper>#analytics {
+	text-align: center;
+	width: 100%;
+	border-top: #c6c4c4 1px solid;
+}
+
+#analyticsCardWrapper>#analytics>#analyticDataWrapper {
+	text-align: center;
+	width: 200px;
+	height: 60px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+#analyticsCardWrapper>#analytics>#analyticDataWrapper div {
+	display: inline-block;
+}
+
+#analyticsCardWrapper>#analytics>#analyticDataWrapper>.analyticData {
+	width: 57px;
+	height: 60px;
+	border-right: #dadada 1px solid;
+}
+
+#analyticsCardWrapper>#analytics>#analyticDataWrapper>.analyticData p {
+	padding: 0;
+	margin: 0;;
+}
+
+.analyticData>.data {
+	margin-top: 13px;
+	font-size: 15pt;
+	font-family: "NanumBarunGothic";
+	color: #39d7ff;
+	font-weight: 600;
+	letter-spacing: -2;
+	color: #4d4d4d;	
+}
+
+.analyticData>.title {
+	font-size: 8pt;
+	font-family: "NanumBarunGothic";
+	color: #8e8e8e;
+}
+
+#analyticsTitle {
+	position: absolute;
+	bottom: 0px;
+	right: -13px;
+	width: 90px;
+	height: 26px;
+	background-image: url('/images/artist/artist_analytics.png');
+	background-size: 90px 26px;
+}
+
+#artistBannerCardWrapper {
+	min-width: 500px;
+	min-height: 265px;	
+	position: absolute;
+	border-right: #c6c4c4 1px solid;
+}
+
+#editBannerMoveWrapper {
+	position: relative;
+	width: 1800px;
+	left: 50%;
+	margin-left: -900px;
+}	
+
+#artistBannerCardWrapper div {
+	display: block;
+	text-align: center;
+}
+
+#bannerMoveRight{
+	width:443px;
+	height: 151px;
+	position: absolute;
+	z-index: 5;
+	cursor: pointer;
+	margin-left: 735px;
+}
+
+#bannerMoveLeft{
+	width: 443px;
+	height: 151px;
+	position: absolute;
+	z-index: 5;
+	cursor: pointer;
+	left: -400px;
+}
+
+#guestBook {
+	width: 100%;
+	height: 50%;
+	cursor: pointer;
+}
+
+.guestBookContent {
+	width: 76%;
+	position: absolute;
+	left: 13%;
+	top: 20%;
+}
+
+.guestProfilePhoto {
+	background-color: black;
+	width: 38px;
+	height: 38px;
+	position: absolute;
+	-webkit-border-radius: 19px;
+	-moz-border-radius: 19px;
+	border-radius: 19px;
+	overflow: hidden;
+}
+
+.guestBookText {
+	color: #6a6a6a;
+	font-size: 13pt;
+	position: absolute;
+	left: 50px;
+}
+
+.guestBookText p {
+	text-align: left;	
+}
+
+#visitors {
+	position: absolute;
+	right: -7px;
+	width: 90px;
+	height: 26px;
+	background-image: url('/images/artist/artist_visitors.png');
+	background-size: 90px 26px;
+}
+
+#artistBanner {
+	width: 100%;
+	height: 50%;
+	border-top: #c6c4c4 1px solid;
+	overflow: hidden;
+}
+
+#editBanner {
+	width: 13px;
+	height: 12px;
+	background-image: url('/images/artist/artist_plus.png');
+	background-size: 13px 12px;
+	position: relative;
+	left: 17px;
+	top: 21px;
+	cursor: pointer;
+}
+
+#artistBanner>#editBanner:hover {
+	width: 13px;
+	height: 12px;
+	background-image: url('/images/artist/artist_plus_highlighted.png');
+	background-size: 13px 12px;
+	position: relative;
+	left: 17px;
+	top: 21px;
+	cursor: pointer;	
+}
+
+#editBannerWrapper>#closeEditBanner {
+	width: 13px;
+	height: 12px;
+	background-image: url('/images/artist/artist_minus.png');
+	background-size: 13px 12px;
+	position: relative;
+	left: 17px;
+	top: 21px;
+	cursor: pointer;
+}
+
+#editBannerWrapper>#closeEditBanner:hover {
+	width: 13px;
+	height: 12px;
+	background-image: url('/images/artist/artist_minus_highlighted.png');
+	background-size: 13px 12px;
+	position: relative;
+	left: 17px;
+	top: 21px;
+	cursor: pointer;	
+}
+
+#editBannerIndicators {
+	width: 250px;
+	height: 17px;
+	position: relative;
+	top: 0px;
+	left: 46px;
+	text-align: left;
+}
+
+#editBannerIndicators div {
+	display: inline-block;
+}
+
+#editBannerIndicators>#bannerNumWrapper {
+	width: 105px;
+	height: 20px;
+	margin-right: 8px;
+}
+
+#editBannerIndicators>#bannerNumWrapper>.bannerNum {
+	color: #bcbcbc;
+	font-size: 13pt;
+	width: 30px;
+	height: 20px;
+	cursor: pointer;
+}
+
+#editBannerIndicators>#bannerNumWrapper>.bannerNum:hover {
+	color: #3ad7ff;
+	font-size: 13pt;
+	width: 30px;
+	height: 20px;
+	cursor: pointer;	
+}
+
+#editBannerIndicators>#bannerNumWrapper>.bannerNumHighlighted {
+	color: #3ad7ff;
+	font-size: 13pt;
+	width: 30px;
+	height: 20px;
+	cursor: pointer;	
+}
+
+#editBannerIndicators>#editBannerIndicatorLine {
+	position: relative;
+	margin-right: 15px;
+	top: 4px;
+	width: 1px;
+	height: 20px;
+	background-color: #9d9d9d;
+}
+
+#editBannerIndicators>#editContentIndicator {
+	width: 105px;
+	height: 20px;
+}
+
+#editBannerIndicators>#editContentIndicator>#photoIndicator {
+	width: 18px;
+	height: 14px;
+	margin-right: 15px;
+	cursor: pointer;
+	background-image: url('/images/artist/artist_photo_indicator.png');
+	background-size: 18px 14px;
+}
+
+#editBannerIndicators>#editContentIndicator>#photoIndicator:hover {
+	width: 18px;
+	height: 14px;
+	margin-right: 15px;
+	cursor: pointer;	
+	background-image: url('/images/artist/artist_photo_indicator_highlighted.png');
+	background-size: 18px 14px;
+}
+
+#editBannerIndicators>#editContentIndicator>#photoIndicatorHighlighted {
+	width: 18px;
+	height: 14px;
+	margin-right: 15px;	
+	cursor: pointer;	
+	background-image: url('/images/artist/artist_photo_indicator_highlighted.png');
+	background-size: 18px 14px;
+}
+
+#editBannerIndicators>#editContentIndicator>#textIndicator {
+	position: relative;
+	top: 1px;
+	margin-right: 15px;
+	width: 16px;
+	height: 15px;	
+	cursor: pointer;
+	background-image: url('/images/artist/artist_text_indicator.png');
+	background-size: 16px 15px;
+}
+
+#editBannerIndicators>#editContentIndicator>#textIndicator:hover {
+	width: 16px;
+	height: 15px;
+	margin-right: 15px;	
+	cursor: pointer;	
+	background-image: url('/images/artist/artist_text_indicator_highlighted.png');
+	background-size: 16px 15px;
+}
+
+#editBannerIndicators>#editContentIndicator>#textIndicatorHighlighted {
+	width: 16px;
+	height: 15px;
+	margin-right: 15px;
+	cursor: pointer;	
+	background-image: url('/images/artist/artist_text_indicator_highlighted.png');
+	background-size: 16px 15px;
+}
+
+#editBannerIndicators>#editContentIndicator>#linkIndicator {
+	width: 15px;
+	height: 13px;
+	cursor: pointer;
+	background-image: url('/images/artist/artist_link_indicator.png');
+	background-size: 15px 13px;
+}
+
+#editBannerIndicators>#editContentIndicator>#linkIndicator:hover {
+	width: 15px;
+	height: 13px;
+	cursor: pointer;	
+	background-image: url('/images/artist/artist_link_indicator_highlighted.png');
+	background-size: 15px 13px;
+}
+
+#editBannerIndicators>#editContentIndicator>#linkIndicatorHighlighted {
+	width: 15px;
+	height: 13px;
+	cursor: pointer;	
+	background-image: url('/images/artist/artist_link_indicator_highlighted.png');
+	background-size: 15px 13px;
+}
+
+#editBannerMoveWrapper>.editBannerContentWrapper {
+	width: 443px;
+	height: 151px;
+	border: #c8c8c8 1px dashed;
+	margin-left: 120px;
+	position: relative;
+	float: left;
+}
+
+.editBannerContentWrapper>.editBannerContent {
+	position: relative;
+	top: 20px;
+	margin: 0 auto;
+	border: #dad7d8 1px solid;
+	width: 400px;
+	height: 110px;
+}
+
+.editBannerContent div {
+	margin-top: 10px;
+}
+
+#editBannerWrapper>#bannerEditComplete {
+	cursor: pointer;
+	width: 40px;
+	height: 34px;
+	background-image: url('/images/artist/artist_edit_complete.png');
+	background-size: 40px 34px;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+#editBannerWrapper>#bannerEditComplete:hover {
+	cursor: pointer;
+	width: 40px;
+	height: 34px;
+	background-image: url('/images/artist/artist_edit_complete_highlighted.png');
+	background-size: 40px 34px;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+.bannerBackground {
+	width: 100%;
+	height: 100%;
+    color: #444444;
+}
+
+.bannerContent {
+	width: 76%;
+	margin: 0 auto;
+	position: relative;
+	top: 27%;
+}
+
+.bannerTitle p {
+	font-size: 12pt;
+}
+
+.bannerSubtitle p {
+	font-size: 10pt;
+}
+
+#links {
+	position: absolute;
+	bottom: 0px;
+	right: -13px;
+	width: 90px;
+	height: 26px;
+	background-image: url('/images/artist/artist_links.png');
+	background-size: 90px 26px;
+}
+
+#artistPageUnderWrapper {
+	background-color: #424242;
+	width: 100%;
+}
+
+#artistPageUnderWrapper>#artistExPlus {
+	z-index: 1024;
+	position: relative;
+	left: 18px;
+	top: 18px;
+	width: 13px;
+	height: 13px;
+	background-image: url('/images/artist/artist_ex_plus.png');
+	background-size: 13px 13px;
+	cursor: pointer;
+}
+
+#artistPageUnderWrapper>#artistExPlus:hover {
+	z-index: 1024;	
+	position: relative;
+	left: 18px;
+	top: 20px;
+	width: 13px;
+	height: 13px;
+	background-image: url('/images/artist/artist_ex_plus_highlighted.png');
+	background-size: 13px 13px;
+	cursor: pointer;
+}
+
+#artistExCardWrapper {
+	position: relative;
+	top: 30px;
+	z-index: 3;
+	/*margin-left: 30px;*/
+	margin: 0 auto;
+}
+
+.artistExCard {
+	text-align: center;
+	float: left;
+	width: 15%;
+	min-width: 205px;
+	min-height: 258px;
+	-webkit-box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.6);
+	-moz-box-shadow:    0px 6px 8px 0px rgba(0, 0, 0, 0.6);
+	box-shadow:         0px 6px 8px 0px rgba(0, 0, 0, 0.6);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	margin-right: 25px;
+	overflow: hidden;
+	background-color: #3b3b3b;
+}
+
+.artistExImage {
+	width: 100%;
+	height: 48%;
+	background-size: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.artistCommingSoonCard {
+	text-align: center;
+	float: left;
+	width: 15%;
+	min-width: 205px;
+	min-height: 258px;
+	-webkit-box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.6);
+	-moz-box-shadow:    0px 6px 8px 0px rgba(0, 0, 0, 0.6);
+	box-shadow:         0px 6px 8px 0px rgba(0, 0, 0, 0.6);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	margin-right: 25px;
+	overflow: hidden;
+	background-color: #3b3b3b;
+}
+
+.artistCommingSoonImage {
+	width: 100%;
+	height: 30%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.hoverArtistExImage {
+	position: relative;
+	top: -51%;
+	opacity:0.75;
+	filter: alpha(opacity=75);
+	z-index: 10;
+	height: 51%;
+	width: 100%;
+	background-size: 100%;	
+	background-color: black;
+}
+
+.hoverArtistExImage>.artistExAnalytics>.analyticDataWrapper {
+	text-align: center;
+	width: 100%;
+	height: 60px;
+	margin: 0 auto;
+}
+
+.hoverArtistExImage>.artistExAnalytics>.analyticDataWrapper div {
+	display: inline-block;
+}
+
+.hoverArtistExImage>.artistExAnalytics>.analyticDataWrapper>.analyticData {
+	width: 45px;
+	height: 60px;
+	position: relative;
+	left: 10px;
+	top: 110%;
+	margin-right: 10px;
+}
+
+.hoverArtistExImage>.artistExAnalytics>.analyticDataWrapper>.analyticData p {
+	padding: 0;
+	margin: 0;;
+}
+
+.hoverArtistExImage>.artistExAnalytics>.analyticDataWrapper>.analyticData>.data {
+	margin-top: 13px;
+	font-size: 15pt;
+	font-family: "NanumBarunGothic";
+	color: white;
+	font-weight: 600;
+	letter-spacing: -2;
+}
+
+.hoverArtistExImage>.artistExAnalytics>.analyticDataWrapper>.analyticData>.title {
+	font-size: 8pt;
+	font-family: "NanumBarunGothic";
+	color: #8e8e8e;
+}
+
+.artistExDetails {
+	position: relative;
+	width: 100%;
+}		/*이부분 주의*/
+
+.artistExDetails>.beforeHoverWrapper {
+	position: relative;
+	width: 100%;
+}		/*이부분 주의*/
+
+.artistExDetails>.hoverWrapper {
+	position: relative;
+}
+
+.hoverWrapper>.moveEx {
+	width: 35px;
+	height: 12px;
+	background: url("/images/artist/artist_ex_enter.png");
+	background-size: 35px 12px;
+	margin:0 auto;
+	cursor: pointer;	
+}
+
+.hoverWrapper>.moveEx:hover {
+	width: 35px;
+	height: 12px;
+	background: url("/images/artist/artist_ex_enter_highlighted.png");
+	background-size: 35px 12px;
+	margin:0 auto;
+	cursor: pointer;	
+}
+
+.artistExTitle {
+	font-size: 11pt;
+	color: #f9f9f9;
+	padding-top: 17%;
+}
+
+.artistExSchedule {
+	font-size: 10pt;
+	color: #aaaaaa;
+}
+
+
+
+

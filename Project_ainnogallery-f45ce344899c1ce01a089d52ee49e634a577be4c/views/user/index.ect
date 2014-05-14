@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chris's Page</title>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/default.css">
+	</head>
+	<body>
+		<div id="artistPageUpperContentWrapper">
+		</div>
+		<div id="artistPageUnderWrapper">
+		</div>
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="/scripts/common-era.js"></script>
+		<script>
+			$(document).ready(function(){
+				Common.loadJSFile('/scripts/user/index.js', 'body', 'js_index');
+				ExhibitionMain.init({
+					user_hash: '<%=@user_hash%>'
+				});
+			});
+			$(window).load(function() {})
+		</script>
+	</body>	
+</html>

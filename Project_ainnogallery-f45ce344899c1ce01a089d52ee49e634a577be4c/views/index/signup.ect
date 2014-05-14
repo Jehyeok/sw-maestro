@@ -1,0 +1,48 @@
+<div id="signupBox">
+	<header>
+		<div id="signupHeader">
+			<h1>Sign up</h1>
+		</div>
+	</header>
+	<form id="signupForm">
+		<section>
+			<div class="clearfix">
+				<div id="signupFormWrapper">
+					<label for="new_user_email">이메일</label><span class="status" id="new_user_email_status">회원가입 확인 메일이 발송됩니다.</span>
+					<input type="email" name="new_user_email" id="new_user_email" />
+					<label for="new_user_password">비밀번호</label><span class="status" id="new_user_password_status">6자 이상</span>
+					<input type="password" name="new_user_password" id="new_user_password" />
+					<label for="new_user_password_v">비밀번호 확인</label><span class="status status-ok" id="new_user_password_v_status">한 번 더 입력해주세요</span>
+					<input type="password" name="new_user_password_v" id="new_user_password_v" />
+					<label for="new_user_nickname">닉네임</label><span class="status status-error" id="new_user_nickname_status">작가 이름으로 사용됩니다</span>
+					<input type="text" name="new_user_nickname" id="new_user_nickname" />
+				</div>
+				<div id="EULAWrapper">
+					<strong>회원 약관</strong>	
+					<p class="eula_checkbox">
+						<input type="checkbox" name="new_user_eula_agree" id="new_user_eula_agree" />
+						<label for="new_user_eula_agree">동의합니다</label>
+					</p>
+					<textarea id="new_user_eula" readonly>회원약관
+1. ㄴ으ㅏ린읠
+2. ㄴ아ㅡ리낭ㄹ
+3. ㅣㄴ아ㅡ리ㅏㄴㅇ리ㅏㅡㄴㅇ리</textarea>
+					<strong>개인정보 보호방침</strong>	
+					<p class="eula_checkbox">
+						<input type="checkbox" name="new_user_privacy_agree" id="new_user_privacy_agree" />
+						<label for="new_user_privacy_agree">동의합니다</label>
+					</p>
+					<textarea id="new_user_privacy" readonly>개인정보 보호방침
+1. ㄴ으ㅏ린읠
+2. ㄴ아ㅡ리낭ㄹ
+3. ㅣㄴ아ㅡ리ㅏㄴㅇ리ㅏㅡㄴㅇ리</textarea>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<p class="clearfix">
+				<input type="submit" value="회원가입" id="new_user_submit" name="new_user_submit" />
+			</p>
+		</footer>
+	</form>
+</div>
